@@ -1103,11 +1103,11 @@ export default function App() {
                     )}
 
                     {activeCardId === "吐槽管理更高效" && (
-                      <img src="https://stimg.de/img/2026/05/22/RwLHl.png" alt="吐槽管理更高效" className="w-full h-full object-cover" />
+                      <img src="https://stimg.de/img/2026/05/22/RwSVS.jpg" alt="吐槽管理更高效" className="w-full h-full object-cover" />
                     )}
 
                     {activeCardId === "口碑提升更高效" && (
-                      <img src="https://stimg.de/img/2026/05/22/RwSVS.jpg" alt="口碑提升更高效" className="w-full h-full object-cover" />
+                      <img src="https://stimg.de/img/2026/05/22/Rws7K.png" alt="口碑提升更高效" className="w-full h-full object-cover" />
                     )}
 
                     {activeCardId === "运营更高效" && (
@@ -1147,9 +1147,9 @@ export default function App() {
               rating: "五星级",
               headerBg: "bg-gradient-to-br from-indigo-600 to-blue-700",
               date: "2025.12.10 (148天)",
-              qa: "8638",
+              qa: "8657",
               codes: "533",
-              efficiency: "167 / 167",
+              efficiency: "169/169",
               efficiencyPct: "100%",
               conversion: "13.54%",
               feedback: "“以往前台每天都要回答的重复咨询，现在很大一部分都能被智能体承载。”贵州饭店前厅部负责人介绍，智能体都能快速响应客人相关诉求，并自动生成工单派到对应部门。"
@@ -1160,7 +1160,7 @@ export default function App() {
               rating: "四钻",
               headerBg: "bg-gradient-to-br from-blue-500 to-indigo-600",
               date: "2026.01.16 (111天)",
-              qa: "1316",
+              qa: "1324",
               codes: "179",
               efficiency: "38 / 38",
               efficiencyPct: "100%",
@@ -1173,7 +1173,7 @@ export default function App() {
               rating: "二钻",
               headerBg: "bg-slate-900",
               date: "2025.12.10 (148天)",
-              qa: "691",
+              qa: "697",
               codes: "72",
               efficiency: "85 / 85",
               efficiencyPct: "100%",
