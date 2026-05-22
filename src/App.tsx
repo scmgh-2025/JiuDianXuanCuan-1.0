@@ -432,7 +432,7 @@ export default function App() {
                   <div className="absolute top-28 -left-0.5 w-0.5 h-8 bg-slate-400 rounded-full"></div>
                   <div className="absolute top-24 -right-0.5 w-0.5 h-10 bg-slate-400 rounded-full"></div>
                   {/* Screen */}
-                  <img src="/景区智能体.png" alt="景区智能体" className="w-full h-full object-cover" />
+                  <img src="./景区智能体.png" alt="景区智能体" className="w-full h-full object-cover" />
                 </div>
               </div>
             </motion.div>
@@ -473,7 +473,7 @@ export default function App() {
                   <div className="absolute top-28 -left-0.5 w-0.5 h-8 bg-slate-400 rounded-full"></div>
                   <div className="absolute top-24 -right-0.5 w-0.5 h-10 bg-slate-400 rounded-full"></div>
                   {/* Screen */}
-                  <img src="/2.jpg" alt="酒店智能体" className="w-full h-full object-cover" />
+                  <img src="./2.jpg" alt="酒店智能体" className="w-full h-full object-cover" />
                 </div>
               </div>
             </motion.div>
@@ -514,7 +514,7 @@ export default function App() {
                   <div className="absolute top-28 -left-0.5 w-0.5 h-8 bg-slate-400 rounded-full"></div>
                   <div className="absolute top-24 -right-0.5 w-0.5 h-10 bg-slate-400 rounded-full"></div>
                   {/* Screen */}
-                  <img src="/餐饮智能体.jpg" alt="餐饮智能体" className="w-full h-full object-cover" />
+                  <img src="./餐饮智能体.jpg" alt="餐饮智能体" className="w-full h-full object-cover" />
                 </div>
               </div>
             </motion.div>
@@ -555,7 +555,7 @@ export default function App() {
                   <div className="absolute top-28 -left-0.5 w-0.5 h-8 bg-slate-400 rounded-full"></div>
                   <div className="absolute top-24 -right-0.5 w-0.5 h-10 bg-slate-400 rounded-full"></div>
                   {/* Screen */}
-                  <img src="/个人智能体.png" alt="个人智能体" className="w-full h-full object-cover" />
+                  <img src="./个人智能体.png" alt="个人智能体" className="w-full h-full object-cover" />
                 </div>
               </div>
             </motion.div>
@@ -594,7 +594,7 @@ export default function App() {
                   {/* Front camera */}
                   <div className="absolute top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-slate-400 rounded-full z-10"></div>
                   {/* Screen */}
-                  <img src="/2.png" alt="诊所药店智能体" className="w-full h-full object-cover" />
+                  <img src="./2.png" alt="诊所药店智能体" className="w-full h-full object-cover" />
                 </div>
               </div>
             </motion.div>
@@ -635,7 +635,7 @@ export default function App() {
                   <div className="absolute top-28 -left-0.5 w-0.5 h-8 bg-slate-400 rounded-full"></div>
                   <div className="absolute top-24 -right-0.5 w-0.5 h-10 bg-slate-400 rounded-full"></div>
                   {/* Screen */}
-                  <img src="/3.png" alt="B端工作台" className="w-full h-full object-cover" />
+                  <img src="./3.png" alt="B端工作台" className="w-full h-full object-cover" />
                 </div>
               </div>
             </motion.div>
@@ -1087,19 +1087,19 @@ export default function App() {
                   {/* Outer Screen Content */}
                   <div className="w-full h-full relative">
                     {activeCardId === "降低人力成本" && (
-                      <img src="/01.jpg" alt="降低人力成本" className="w-full h-full object-cover" />
+                      <img src="./01.jpg" alt="降低人力成本" className="w-full h-full object-cover" />
                     )}
 
                     {activeCardId === "降低管理成本" && (
-                      <img src="/02.jpg" alt="降低管理成本" className="w-full h-full object-cover" />
+                      <img src="./02.jpg" alt="降低管理成本" className="w-full h-full object-cover" />
                     )}
 
                     {activeCardId === "降低佣金成本" && (
-                      <img src="/03.jpg" alt="降低佣金成本" className="w-full h-full object-cover" />
+                      <img src="./03.jpg" alt="降低佣金成本" className="w-full h-full object-cover" />
                     )}
 
                     {activeCardId === "服务更高效" && (
-                      <img src="/04.jpg" alt="服务更高效" className="w-full h-full object-cover" />
+                      <img src="./04.jpg" alt="服务更高效" className="w-full h-full object-cover" />
                     )}
 
                     {activeCardId === "吐槽管理更高效" && (
@@ -1111,15 +1111,15 @@ export default function App() {
                     )}
 
                     {activeCardId === "运营更高效" && (
-                      <img src="/3.png" alt="运营更高效" className="w-full h-full object-cover" />
+                      <img src="./3.png" alt="运营更高效" className="w-full h-full object-cover" />
                     )}
 
                     {activeCardId === "供应链分销增收" && (
-                      <img src="/gyl.png" alt="供应链分销增收" className="w-full h-full object-cover" />
+                      <img src="./gyl.png" alt="供应链分销增收" className="w-full h-full object-cover" />
                     )}
 
                     {activeCardId === "自营商城直销增收" && (
-                      <img src="/06.jpg" alt="自营商城直销增收" className="w-full h-full object-cover" />
+                      <img src="./06.jpg" alt="自营商城直销增收" className="w-full h-full object-cover" />
                     )}
                   </div>
                 </div>
