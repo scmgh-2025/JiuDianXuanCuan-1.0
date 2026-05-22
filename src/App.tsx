@@ -589,7 +589,7 @@ export default function App() {
               </div>
 
               {/* Tablet Mockup 5 */}
-              <div className="w-full max-w-[240px] mx-auto bg-gradient-to-br from-slate-200 to-slate-300 rounded-[20px] p-1 shadow-2xl overflow-hidden aspect-[4/3] text-left flex flex-col font-sans relative group cursor-pointer border border-slate-300 -mt-8">
+              <div className="w-full max-w-[280px] mx-auto bg-gradient-to-br from-slate-200 to-slate-300 rounded-[20px] p-1 shadow-2xl overflow-hidden aspect-[4/3] text-left flex flex-col font-sans relative group cursor-pointer border border-slate-300 -mt-16">
                 <div className="w-full h-full bg-slate-100 rounded-[12px] overflow-hidden relative">
                   {/* Front camera */}
                   <div className="absolute top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-slate-400 rounded-full z-10"></div>
@@ -1151,7 +1151,7 @@ export default function App() {
               codes: "533",
               efficiency: "167 / 167",
               efficiencyPct: "100%",
-              conversion: "20.78%",
+              conversion: "13.54%",
               feedback: "“以往前台每天都要回答的重复咨询，现在很大一部分都能被智能体承载。”贵州饭店前厅部负责人介绍，智能体都能快速响应客人相关诉求，并自动生成工单派到对应部门。"
             },
             {
@@ -1164,7 +1164,7 @@ export default function App() {
               codes: "179",
               efficiency: "38 / 38",
               efficiencyPct: "100%",
-              conversion: "17.46%",
+              conversion: "6.16%",
               feedback: "该酒店为温泉主题，住客咨询高度集中于温泉营业时间、水温等信息类问题。智能体有效分流了前台大量重复咨询，在“信息密集型”场景中发挥了显著作用。"
             },
             {
@@ -1177,7 +1177,7 @@ export default function App() {
               codes: "72",
               efficiency: "85 / 85",
               efficiencyPct: "100%",
-              conversion: "23.50%",
+              conversion: "8.07%",
               feedback: "在无前台人力的夜间，住客对Wi-Fi、空调等需求只能依赖智能体。虽然规模较小，但渗透率极高，表明智能系统在无人值守场景下发挥了关键作用。"
             }
           ].map((hotel, idx) => (
@@ -1229,7 +1229,7 @@ export default function App() {
                     <div className="text-[11px] text-slate-400 font-bold uppercase tracking-wider mb-2">用户转化率</div>
                     <div className="text-2xl font-bold text-slate-800 leading-none mb-2">{hotel.conversion}</div>
                     <div className="text-[10px] text-slate-400 leading-tight">
-                      问答数 ÷ 上线天数 ÷ <br />实际入住人数
+                      问答数÷上线天数÷总客房数
                     </div>
                   </div>
                 </div>
