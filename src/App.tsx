@@ -41,7 +41,12 @@ import {
   User,
   Target,
   Rocket,
-  Phone
+  Phone,
+  Smartphone,
+  UserCog,
+  Monitor,
+  Lightbulb,
+  Award
 } from "lucide-react";
 
 const Section = ({ children, className = "", id = "" }: { children: React.ReactNode, className?: string, id?: string }) => (
@@ -64,12 +69,13 @@ export default function App() {
   const [menuOpen, setMenuOpen] = React.useState(false);
 
   const navItems = [
-    { id: "why-ai", label: "一、为什么要用AI？" },
+    { id: "why-ai", label: "一、互联网1.0到AI时代" },
     { id: "guizhou-practice", label: "二、“黄小西”AI旅游服务生态" },
     { id: "positioning", label: "三、酒店智能体产品定位" },
-    { id: "values", label: "四、核心价值" },
-    { id: "cases", label: "五、合作案例" },
-    { id: "partnership", label: "六、合作方式" },
+    { id: "features", label: "四、产品功能" },
+    { id: "values", label: "五、核心价值" },
+    { id: "cases", label: "六、合作案例" },
+      { id: "partnership", label: "七、合作方式" },
   ];
 
   const scrollToSection = (id: string) => {
@@ -140,7 +146,7 @@ export default function App() {
       {/* --- SECTION I: WHY AI? --- */}
       <Section id="why-ai">
         <motion.div {...fadeIn} className="text-center mb-16">
-          <h2 className="text-blue-600 font-bold tracking-tight text-3xl md:text-4xl mb-6 font-display">一、为什么要用AI？</h2>
+          <h2 className="text-blue-600 font-bold tracking-tight text-3xl md:text-4xl mb-6 font-display">一、互联网1.0到AI时代</h2>
           <div className="max-w-3xl mx-auto">
             <h4 className="text-lg md:text-xl font-bold text-slate-800 mb-2">从互联网1.0到AI时代，赋能酒店经营能力三次跃迁</h4>
             <p className="text-slate-600 text-sm md:text-base leading-relaxed">
@@ -155,23 +161,7 @@ export default function App() {
           <div className="absolute left-1/2 top-0 bottom-0 w-px bg-slate-200 hidden md:block" />
           
           <div className="space-y-24">
-            {/* Era 1 */}
-            <motion.div {...fadeIn} className="relative flex flex-col md:flex-row items-center gap-8 md:gap-0">
-              <div className="md:w-1/2 md:pr-12 md:text-right order-2 md:order-1">
-                <h4 className="text-2xl font-bold mb-4 font-display text-slate-900">前互联网时代</h4>
-                <p className="text-slate-600 leading-relaxed text-base">
-                  企业寻找客户和销售产品只能依赖传统手段，如查阅纸质电话黄页、参加线下展会，或依靠业务员徒步拜访。
-                </p>
-              </div>
-              <div className="absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-white border-4 border-slate-100 flex items-center justify-center z-10 hidden md:flex shadow-sm">
-                <History className="w-5 h-5 text-slate-400" />
-              </div>
-              <div className="md:w-1/2 md:pl-12 order-1 md:order-2">
-                <div className="px-4 py-1.5 rounded-full bg-slate-100 text-slate-500 text-xs md:text-sm font-bold uppercase inline-block mb-3">1990年</div>
-              </div>
-            </motion.div>
-
-            {/* Era 2 */}
+            {/* Era 1: 网页时代 */}
             <motion.div {...fadeIn} transition={{ delay: 0.1 }} className="relative flex flex-col md:flex-row items-center gap-8 md:gap-0">
               <div className="md:w-1/2 md:pr-12 md:text-right order-1">
                  <div className="px-4 py-1.5 rounded-full bg-blue-50 text-blue-600 text-xs md:text-sm font-bold uppercase inline-block mb-3">2000年 网页时代</div>
@@ -182,7 +172,7 @@ export default function App() {
               <div className="md:w-1/2 md:pl-12 order-2">
                 <h4 className="text-2xl font-bold mb-4 font-display text-slate-900 border-l-4 md:border-l-0 md:border-r-0 border-blue-500 pl-4 md:pl-0">网页时代（信息展示）</h4>
                 <p className="text-slate-600 leading-relaxed text-base">
-                  仅能搭建基础官网，实现酒店信息、房型、价格的单向展示，无互动、无交易、无运营，核心是 “让客人看到”。
+                  让酒店拥有线上身份，把门店信息搬到网上，客户能随时查到酒店地址、房型、价格，打破地域限制，让更多人知道你的酒店存在。
                 </p>
               </div>
             </motion.div>
@@ -192,7 +182,7 @@ export default function App() {
               <div className="md:w-1/2 md:pr-12 md:text-right order-2 md:order-1">
                 <h4 className="text-2xl font-bold mb-4 font-display text-slate-900">OTA 平台时代（流量依赖）</h4>
                 <p className="text-slate-600 leading-relaxed text-base">
-                  依托携程、美团等平台获取订单，平台掌握流量分配权，酒店需支付高额佣金、参与竞价排名，核心是 “靠平台卖房”，经营自主权弱、利润被持续压缩。
+                  借助大平台流量快速获客，帮酒店打开线上销路、提升入住率；标准化订房流程，简化客户预订与酒店接单，让酒店轻松做线上生意。
                 </p>
               </div>
               <div className="absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-white border-4 border-slate-100 flex items-center justify-center z-10 hidden md:flex shadow-sm">
@@ -214,7 +204,7 @@ export default function App() {
               <div className="md:w-1/2 md:pl-12 order-2">
                 <h4 className="text-2xl font-bold mb-4 font-display text-slate-900 border-l-4 md:border-l-0 md:border-r-0 border-indigo-500 pl-4 md:pl-0">AI 智能体时代（自主经营）</h4>
                 <p className="text-slate-600 leading-relaxed text-base">
-                  以大模型为核心，为酒店打造专属 AI 数字助手，实现服务自动化、运营数字化、增收多元化，核心是 “自己掌控客源、自己主导经营、自己赚取全利润”，彻底摆脱平台捆绑，降本增效同时拓展非房收入。
+                  以 AI 大模型为核心打造酒店专属数字经营助手，把经营主动权交还给酒店，帮助酒店降本增效、自主经营、长效增收、持续盈利。
                 </p>
               </div>
             </motion.div>
@@ -223,6 +213,50 @@ export default function App() {
 
         {/* Why Hotels Must Upgrade AI */}
         <div className="mt-20 border-t border-slate-100 pt-16">
+          {/* AI背景介绍 */}
+          <motion.div {...fadeIn} className="mb-16 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-3xl p-10 md:p-12 border border-blue-100">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-12 h-12 rounded-xl bg-blue-500 text-white flex items-center justify-center shadow-lg shadow-blue-200">
+                <Sparkles className="w-6 h-6" />
+              </div>
+              <h4 className="text-2xl font-bold text-slate-900">AI 智能体时代已经到来</h4>
+            </div>
+            <div className="space-y-6 text-slate-600 leading-relaxed">
+              <p className="text-lg">
+                <span className="font-semibold text-blue-600">AI已不再是实验室里的概念</span>，而是正在重塑各行各业，改变我们的生活。
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                <div className="bg-white/80 rounded-2xl p-6 border border-blue-100 shadow-sm hover:shadow-md transition-shadow">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-8 h-8 rounded-lg bg-emerald-100 flex items-center justify-center">
+                      <TrendingUp className="w-4 h-4 text-emerald-600" />
+                    </div>
+                    <span className="font-semibold text-slate-800">AI巨头统治美股</span>
+                  </div>
+                  <p className="text-slate-600 leading-relaxed">以英伟达、苹果、微软、谷歌、亚马逊、Meta和特斯拉组成的"七巨头"，总市值已突破<span className="font-bold text-emerald-600 text-lg">23万亿美元</span>，占标普500指数总市值的三分之一以上。</p>
+                </div>
+                <div className="bg-white/80 rounded-2xl p-6 border border-blue-100 shadow-sm hover:shadow-md transition-shadow">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-8 h-8 rounded-lg bg-amber-100 flex items-center justify-center">
+                      <Zap className="w-4 h-4 text-amber-600" />
+                    </div>
+                    <span className="font-semibold text-slate-800">AI打破传统工作</span>
+                  </div>
+                  <p className="text-slate-600 leading-relaxed">约<span className="font-bold text-amber-600 text-lg">28%</span>的常规重复性工作已通过AI实现完全自动化；目前全球已有<span className="font-bold text-amber-600 text-lg">3亿个</span>工作岗位受AI工具深度影响。</p>
+                </div>
+              </div>
+              <div className="bg-white/80 rounded-2xl p-6 border border-blue-100 shadow-sm hover:shadow-md transition-shadow mt-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-8 h-8 rounded-lg bg-purple-100 flex items-center justify-center">
+                    <Rocket className="w-4 h-4 text-purple-600" />
+                  </div>
+                  <span className="font-semibold text-slate-800">AI延展普通人的能力</span>
+                </div>
+                <p className="text-slate-600 leading-relaxed">一个29岁中专生，仅凭一台电脑、3000元成本、10天时间，就独立制作出3分钟短片。上线数日，火遍海内外，连好莱坞的制作人都连夜寻求合作——<span className="font-semibold text-purple-600">在AI时代，一个人可以匹敌一支专业团队</span>。</p>
+              </div>
+            </div>
+          </motion.div>
+
           <motion.div {...fadeIn} className="flex items-center gap-3 text-rose-600 mb-10">
             <div className="w-8 h-8 rounded-full bg-rose-100 flex items-center justify-center shrink-0">
               <AlertCircle className="w-4 h-4" />
@@ -230,47 +264,85 @@ export default function App() {
             <h4 className="text-2xl font-bold font-display text-slate-900">为什么酒店必须做AI升级？</h4>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            {[
-              {
-                title: "人力成本高",
-                content: "前台重复工作多、流动率极高、招聘难。",
-                icon: Users
-              },
-              {
-                title: "OTA抽佣高",
-                content: "利润被平台吃掉，赚的钱都给携程美团打工。",
-                icon: TrendingDown
-              },
-              {
-                title: "客源不自主",
-                content: "没有私域沉淀，无法二次营销，复购极难。",
-                icon: ShoppingCart
-              }
-            ].map((item, i) => (
-              <motion.div 
-                key={i} 
-                {...fadeIn} 
-                transition={{ delay: i * 0.1 }}
-                className="p-8 rounded-3xl bg-white border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] relative group hover:border-rose-100 transition-colors"
-              >
-                <div className="w-12 h-12 rounded-2xl bg-rose-50 text-rose-500 flex items-center justify-center mb-6">
-                  <item.icon className="w-6 h-6" />
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+            {/* 人力成本高 */}
+            <motion.div 
+              {...fadeIn} 
+              transition={{ delay: 0 }}
+              className="rounded-3xl bg-white border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] overflow-hidden hover:shadow-lg transition-shadow"
+            >
+              <div className="p-5 bg-gradient-to-br from-rose-50 to-white border-b border-rose-100">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-rose-500 text-white flex items-center justify-center">
+                    <Users className="w-5 h-5" />
+                  </div>
+                  <h5 className="text-lg font-bold text-slate-900">人力成本高</h5>
                 </div>
-                <h5 className="text-lg font-bold text-slate-900 mb-3">{item.title}</h5>
-                <p className="text-slate-500 text-sm leading-relaxed">{item.content}</p>
-              </motion.div>
-            ))}
-          </div>
+              </div>
+              <div className="p-5 space-y-3">
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  <span className="text-rose-500 font-medium">问题：</span>
+                  前台重复性工作繁重，入住登记、咨询解答等占用大量人力；人员流动率高，招聘培训成本持续攀升。
+                </p>
+                <p className="text-sm text-slate-600 leading-relaxed pt-3 border-t border-slate-100">
+                  <span className="text-emerald-600 font-medium">智能体作用：</span>
+                  AI智能问答7×24小时自动解答住客问题，智能工单自动分类派单，大幅降低人工成本和协调成本。
+                </p>
+              </div>
+            </motion.div>
 
-          <motion.div 
-            {...fadeIn} 
-            className="w-full bg-[#0b0f19] text-white rounded-3xl p-8 text-center border border-slate-800 mb-8"
-          >
-            <p className="text-lg md:text-xl font-medium tracking-wide font-display text-slate-100 italic">
-              “酒店越来越像打工人，而不是经营者”
-            </p>
-          </motion.div>
+            {/* 服务不标准 */}
+            <motion.div 
+              {...fadeIn} 
+              transition={{ delay: 0.1 }}
+              className="rounded-3xl bg-white border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] overflow-hidden hover:shadow-lg transition-shadow"
+            >
+              <div className="p-5 bg-gradient-to-br from-amber-50 to-white border-b border-amber-100">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-amber-500 text-white flex items-center justify-center">
+                    <Award className="w-5 h-5" />
+                  </div>
+                  <h5 className="text-lg font-bold text-slate-900">服务不标准</h5>
+                </div>
+              </div>
+              <div className="p-5 space-y-3">
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  <span className="text-amber-500 font-medium">问题：</span>
+                  服务质量依赖个体能力，水平参差不齐；高峰期人力有限，住客等待时间长，体验受损。
+                </p>
+                <p className="text-sm text-slate-600 leading-relaxed pt-3 border-t border-slate-100">
+                  <span className="text-emerald-600 font-medium">智能体作用：</span>
+                  智能体服务标准统一、回复稳定准确，高峰期不受人力限制；多智能体协同提供个性化入住引导和各种场景服务。
+                </p>
+              </div>
+            </motion.div>
+
+            {/* 酒店管理难 */}
+            <motion.div 
+              {...fadeIn} 
+              transition={{ delay: 0.2 }}
+              className="rounded-3xl bg-white border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] overflow-hidden hover:shadow-lg transition-shadow"
+            >
+              <div className="p-5 bg-gradient-to-br from-blue-50 to-white border-b border-blue-100">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-blue-500 text-white flex items-center justify-center">
+                    <Settings className="w-5 h-5" />
+                  </div>
+                  <h5 className="text-lg font-bold text-slate-900">酒店管理难</h5>
+                </div>
+              </div>
+              <div className="p-5 space-y-3">
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  <span className="text-blue-500 font-medium">问题：</span>
+                  人员流动大导致管理断层，服务规范传承困难；缺乏有效监督手段，问题难以追溯复盘。
+                </p>
+                <p className="text-sm text-slate-600 leading-relaxed pt-3 border-t border-slate-100">
+                  <span className="text-emerald-600 font-medium">智能体作用：</span>
+                  AI智能体承担标准化服务，确保规范执行不受人员变动影响；全程留痕，管理数据可视化，随时查看服务记录和问题解决率。
+                </p>
+              </div>
+            </motion.div>
+          </div>
 
           <motion.div {...fadeIn} className="bg-blue-600 rounded-3xl p-8 md:p-12 text-white relative overflow-hidden" id="industry-trend">
             <div className="absolute right-0 bottom-0 opacity-10">
@@ -395,43 +467,115 @@ export default function App() {
             </h4>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Card 1: 景区智能体 */}
+          {/* 第一层：多彩黄小西 - 单独居中，横向布局 */}
+          <div className="flex justify-center mb-12">
             <motion.div 
               {...fadeIn} 
               transition={{ delay: 0.05 }}
-              className="bg-white border border-slate-150 p-6 rounded-[32px] flex flex-col justify-between hover:shadow-xl hover:border-blue-200 transition-all text-center h-full"
+              className="bg-gradient-to-br from-blue-50 via-white to-indigo-50 border-2 border-blue-200 p-8 rounded-[32px] hover:shadow-2xl hover:border-blue-300 transition-all w-full max-w-[680px]"
+            >
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                {/* 左侧：文字内容 */}
+                <div className="flex-1 text-left">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-blue-100 border-2 border-blue-200 flex items-center justify-center text-blue-600 shadow-lg">
+                      <Sparkles className="w-6 h-6" />
+                    </div>
+                    <h5 className="font-bold text-slate-900 text-2xl">多彩黄小西</h5>
+                  </div>
+                  
+                  <p className="text-slate-600 text-sm leading-relaxed mb-4">
+                    覆盖"吃、住、行、游、购、娱"全链条的"全省一站式旅游智能服务总入口"
+                  </p>
+                  
+                  <div className="space-y-2 text-slate-500 text-sm">
+                    <div className="flex items-center gap-2 text-slate-600 font-medium">
+                      <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0" />
+                      <span>一站式旅游服务平台</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-slate-600 font-medium">
+                      <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0" />
+                      <span>智能行程规划推荐</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-slate-600 font-medium">
+                      <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0" />
+                      <span>本地特色文化体验</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 右侧：机模 */}
+                <div className="w-full max-w-[140px] bg-gradient-to-br from-slate-200 to-slate-300 rounded-[28px] p-1.5 shadow-2xl overflow-hidden aspect-[9/18] text-left flex flex-col font-sans relative group cursor-pointer border border-slate-100 shrink-0">
+                  <div className="w-full h-full bg-slate-100 rounded-[24px] overflow-hidden relative">
+                    <div className="absolute top-14 -left-0.5 w-0.5 h-5 bg-slate-400 rounded-full"></div>
+                    <div className="absolute top-24 -left-0.5 w-0.5 h-7 bg-slate-400 rounded-full"></div>
+                    <div className="absolute top-20 -right-0.5 w-0.5 h-9 bg-slate-400 rounded-full"></div>
+                    <img src="./dchxx.png" alt="多彩黄小西" className="w-full h-full object-cover" />
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* 连接线装饰 - 美化版树状分支（4个分支） */}
+          <div className="flex justify-center mb-10">
+            <div className="relative w-[80%] max-w-[800px] h-12">
+              {/* 主干线 - 从顶部中心向下 */}
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1 h-6 bg-gradient-to-b from-blue-300 to-blue-400 rounded-full"></div>
+              
+              {/* 水平分支线 */}
+              <div className="absolute top-6 left-[12%] right-[12%] h-1 bg-gradient-to-r from-blue-200 via-blue-400 to-blue-200 rounded-full"></div>
+              
+              {/* 四个向下的分支线 */}
+              <div className="absolute top-6 left-[12%] w-1 h-6 bg-gradient-to-b from-blue-400 to-blue-300 rounded-full"></div>
+              <div className="absolute top-6 left-[37%] w-1 h-6 bg-gradient-to-b from-blue-400 to-blue-300 rounded-full"></div>
+              <div className="absolute top-6 left-[63%] w-1 h-6 bg-gradient-to-b from-blue-400 to-blue-300 rounded-full"></div>
+              <div className="absolute top-6 right-[12%] w-1 h-6 bg-gradient-to-b from-blue-400 to-blue-300 rounded-full"></div>
+              
+              {/* 装饰性圆点 */}
+              <div className="absolute top-5 left-[12%] -translate-x-1/2 w-3 h-3 bg-blue-400 rounded-full border-2 border-white shadow-md"></div>
+              <div className="absolute top-5 left-[37%] -translate-x-1/2 w-3 h-3 bg-blue-400 rounded-full border-2 border-white shadow-md"></div>
+              <div className="absolute top-5 left-[63%] -translate-x-1/2 w-3 h-3 bg-blue-400 rounded-full border-2 border-white shadow-md"></div>
+              <div className="absolute top-5 right-[12%] translate-x-1/2 w-3 h-3 bg-blue-400 rounded-full border-2 border-white shadow-md"></div>
+            </div>
+          </div>
+
+          {/* 第二层：4个智能体卡片 */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            {/* Card 1: 景区智能体 */}
+            <motion.div 
+              {...fadeIn} 
+              transition={{ delay: 0.1 }}
+              className="bg-white border border-slate-150 p-4 rounded-[24px] flex flex-col justify-between hover:shadow-xl hover:border-blue-200 transition-all text-center h-full"
             >
               <div>
-                <div className="w-14 h-14 rounded-full bg-blue-50/70 border border-blue-100 flex items-center justify-center mb-5 mx-auto text-blue-600">
-                  <MapPin className="w-6 h-6" />
+                <div className="w-12 h-12 rounded-full bg-blue-50/70 border border-blue-100 flex items-center justify-center mb-3 mx-auto text-blue-600">
+                  <MapPin className="w-5 h-5" />
                 </div>
-                <h5 className="font-bold text-slate-900 text-xl mb-4">景区智能体</h5>
+                <h5 className="font-bold text-slate-900 text-base mb-3">景区智能体</h5>
                 
-                <div className="space-y-2 mb-8 text-slate-500 text-sm inline-block text-left">
-                  <div className="flex items-center gap-2 text-slate-600 font-medium">
-                    <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0" />
+                <div className="space-y-1.5 mb-4 text-slate-500 text-xs inline-block text-left">
+                  <div className="flex items-center gap-1.5 text-slate-600 font-medium">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-blue-500 shrink-0" />
                     <span>智能导览与讲解</span>
                   </div>
-                  <div className="flex items-center gap-2 text-slate-600 font-medium">
-                    <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0" />
+                  <div className="flex items-center gap-1.5 text-slate-600 font-medium">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-blue-500 shrink-0" />
                     <span>票务分时预约</span>
                   </div>
-                  <div className="flex items-center gap-2 text-slate-600 font-medium">
-                    <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0" />
+                  <div className="flex items-center gap-1.5 text-slate-600 font-medium">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-blue-500 shrink-0" />
                     <span>客流预警引导</span>
                   </div>
                 </div>
               </div>
 
               {/* Phone Mockup 1 */}
-              <div className="w-full max-w-[160px] mx-auto bg-gradient-to-br from-slate-200 to-slate-300 rounded-[32px] p-1.5 shadow-2xl overflow-hidden aspect-[9/18] text-left flex flex-col font-sans relative group cursor-pointer border border-slate-100">
-                <div className="w-full h-full bg-slate-100 rounded-[28px] overflow-hidden relative">
-                  {/* Side buttons */}
-                  <div className="absolute top-16 -left-0.5 w-0.5 h-6 bg-slate-400 rounded-full"></div>
-                  <div className="absolute top-28 -left-0.5 w-0.5 h-8 bg-slate-400 rounded-full"></div>
-                  <div className="absolute top-24 -right-0.5 w-0.5 h-10 bg-slate-400 rounded-full"></div>
-                  {/* Screen */}
+              <div className="w-full max-w-[120px] mx-auto bg-gradient-to-br from-slate-200 to-slate-300 rounded-[24px] p-1 shadow-2xl overflow-hidden aspect-[9/18] text-left flex flex-col font-sans relative group cursor-pointer border border-slate-100">
+                <div className="w-full h-full bg-slate-100 rounded-[20px] overflow-hidden relative">
+                  <div className="absolute top-12 -left-0.5 w-0.5 h-4 bg-slate-400 rounded-full"></div>
+                  <div className="absolute top-20 -left-0.5 w-0.5 h-6 bg-slate-400 rounded-full"></div>
+                  <div className="absolute top-18 -right-0.5 w-0.5 h-8 bg-slate-400 rounded-full"></div>
                   <img src="./景区智能体.png" alt="景区智能体" className="w-full h-full object-cover" />
                 </div>
               </div>
@@ -440,39 +584,37 @@ export default function App() {
             {/* Card 2: 酒店智能体 */}
             <motion.div 
               {...fadeIn} 
-              transition={{ delay: 0.1 }}
-              className="bg-white border border-slate-150 p-6 rounded-[32px] flex flex-col justify-between hover:shadow-xl hover:border-blue-200 transition-all text-center h-full"
+              transition={{ delay: 0.15 }}
+              className="bg-white border border-slate-150 p-4 rounded-[24px] flex flex-col justify-between hover:shadow-xl hover:border-blue-200 transition-all text-center h-full"
             >
               <div>
-                <div className="w-14 h-14 rounded-full bg-blue-50/70 border border-blue-100 flex items-center justify-center mb-5 mx-auto text-blue-600">
-                  <Bot className="w-6 h-6" />
+                <div className="w-12 h-12 rounded-full bg-blue-50/70 border border-blue-100 flex items-center justify-center mb-3 mx-auto text-blue-600">
+                  <Bot className="w-5 h-5" />
                 </div>
-                <h5 className="font-bold text-slate-900 text-xl mb-4">酒店智能体</h5>
+                <h5 className="font-bold text-slate-900 text-base mb-3">酒店智能体</h5>
                 
-                <div className="space-y-2 mb-8 text-slate-500 text-sm inline-block text-left">
-                  <div className="flex items-center gap-2 text-slate-600 font-medium">
-                    <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0" />
+                <div className="space-y-1.5 mb-4 text-slate-500 text-xs inline-block text-left">
+                  <div className="flex items-center gap-1.5 text-slate-600 font-medium">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-blue-500 shrink-0" />
                     <span>入住咨询与房型介绍</span>
                   </div>
-                  <div className="flex items-center gap-2 text-slate-600 font-medium">
-                    <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0" />
+                  <div className="flex items-center gap-1.5 text-slate-600 font-medium">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-blue-500 shrink-0" />
                     <span>智能推荐与周边服务</span>
                   </div>
-                  <div className="flex items-center gap-2 text-slate-600 font-medium">
-                    <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0" />
+                  <div className="flex items-center gap-1.5 text-slate-600 font-medium">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-blue-500 shrink-0" />
                     <span>客户关怀与满意度调查</span>
                   </div>
                 </div>
               </div>
 
               {/* Phone Mockup 2 */}
-              <div className="w-full max-w-[160px] mx-auto bg-gradient-to-br from-slate-200 to-slate-300 rounded-[32px] p-1.5 shadow-2xl overflow-hidden aspect-[9/18] text-left flex flex-col font-sans relative group cursor-pointer border border-slate-100">
-                <div className="w-full h-full bg-slate-100 rounded-[28px] overflow-hidden relative">
-                  {/* Side buttons */}
-                  <div className="absolute top-16 -left-0.5 w-0.5 h-6 bg-slate-400 rounded-full"></div>
-                  <div className="absolute top-28 -left-0.5 w-0.5 h-8 bg-slate-400 rounded-full"></div>
-                  <div className="absolute top-24 -right-0.5 w-0.5 h-10 bg-slate-400 rounded-full"></div>
-                  {/* Screen */}
+              <div className="w-full max-w-[120px] mx-auto bg-gradient-to-br from-slate-200 to-slate-300 rounded-[24px] p-1 shadow-2xl overflow-hidden aspect-[9/18] text-left flex flex-col font-sans relative group cursor-pointer border border-slate-100">
+                <div className="w-full h-full bg-slate-100 rounded-[20px] overflow-hidden relative">
+                  <div className="absolute top-12 -left-0.5 w-0.5 h-4 bg-slate-400 rounded-full"></div>
+                  <div className="absolute top-20 -left-0.5 w-0.5 h-6 bg-slate-400 rounded-full"></div>
+                  <div className="absolute top-18 -right-0.5 w-0.5 h-8 bg-slate-400 rounded-full"></div>
                   <img src="./2.jpg" alt="酒店智能体" className="w-full h-full object-cover" />
                 </div>
               </div>
@@ -481,39 +623,37 @@ export default function App() {
             {/* Card 3: 餐饮智能体 */}
             <motion.div 
               {...fadeIn} 
-              transition={{ delay: 0.15 }}
-              className="bg-white border border-slate-150 p-6 rounded-[32px] flex flex-col justify-between hover:shadow-xl hover:border-blue-200 transition-all text-center h-full"
+              transition={{ delay: 0.2 }}
+              className="bg-white border border-slate-150 p-4 rounded-[24px] flex flex-col justify-between hover:shadow-xl hover:border-blue-200 transition-all text-center h-full"
             >
               <div>
-                <div className="w-14 h-14 rounded-full bg-blue-50/70 border border-blue-100 flex items-center justify-center mb-5 mx-auto text-blue-600">
-                  <Utensils className="w-6 h-6" />
+                <div className="w-12 h-12 rounded-full bg-blue-50/70 border border-blue-100 flex items-center justify-center mb-3 mx-auto text-blue-600">
+                  <Utensils className="w-5 h-5" />
                 </div>
-                <h5 className="font-bold text-slate-900 text-xl mb-4">餐饮智能体</h5>
+                <h5 className="font-bold text-slate-900 text-base mb-3">餐饮智能体</h5>
                 
-                <div className="space-y-2 mb-8 text-slate-500 text-sm inline-block text-left">
-                  <div className="flex items-center gap-2 text-slate-600 font-medium">
-                    <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0" />
+                <div className="space-y-1.5 mb-4 text-slate-500 text-xs inline-block text-left">
+                  <div className="flex items-center gap-1.5 text-slate-600 font-medium">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-blue-500 shrink-0" />
                     <span>菜单推荐与口味偏好</span>
                   </div>
-                  <div className="flex items-center gap-2 text-slate-600 font-medium">
-                    <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0" />
+                  <div className="flex items-center gap-1.5 text-slate-600 font-medium">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-blue-500 shrink-0" />
                     <span>排队预约与在线取号</span>
                   </div>
-                  <div className="flex items-center gap-2 text-slate-600 font-medium">
-                    <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0" />
+                  <div className="flex items-center gap-1.5 text-slate-600 font-medium">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-blue-500 shrink-0" />
                     <span>优惠推送与食材溯源</span>
                   </div>
                 </div>
               </div>
 
               {/* Phone Mockup 3 */}
-              <div className="w-full max-w-[160px] mx-auto bg-gradient-to-br from-slate-200 to-slate-300 rounded-[32px] p-1.5 shadow-2xl overflow-hidden aspect-[9/18] text-left flex flex-col font-sans relative group cursor-pointer border border-slate-100">
-                <div className="w-full h-full bg-slate-100 rounded-[28px] overflow-hidden relative">
-                  {/* Side buttons */}
-                  <div className="absolute top-16 -left-0.5 w-0.5 h-6 bg-slate-400 rounded-full"></div>
-                  <div className="absolute top-28 -left-0.5 w-0.5 h-8 bg-slate-400 rounded-full"></div>
-                  <div className="absolute top-24 -right-0.5 w-0.5 h-10 bg-slate-400 rounded-full"></div>
-                  {/* Screen */}
+              <div className="w-full max-w-[120px] mx-auto bg-gradient-to-br from-slate-200 to-slate-300 rounded-[24px] p-1 shadow-2xl overflow-hidden aspect-[9/18] text-left flex flex-col font-sans relative group cursor-pointer border border-slate-100">
+                <div className="w-full h-full bg-slate-100 rounded-[20px] overflow-hidden relative">
+                  <div className="absolute top-12 -left-0.5 w-0.5 h-4 bg-slate-400 rounded-full"></div>
+                  <div className="absolute top-20 -left-0.5 w-0.5 h-6 bg-slate-400 rounded-full"></div>
+                  <div className="absolute top-18 -right-0.5 w-0.5 h-8 bg-slate-400 rounded-full"></div>
                   <img src="./餐饮智能体.jpg" alt="餐饮智能体" className="w-full h-full object-cover" />
                 </div>
               </div>
@@ -522,124 +662,80 @@ export default function App() {
             {/* Card 4: 个人智能体 */}
             <motion.div 
               {...fadeIn} 
-              transition={{ delay: 0.2 }}
-              className="bg-white border border-slate-150 p-6 rounded-[32px] flex flex-col justify-between hover:shadow-xl hover:border-blue-200 transition-all text-center h-full"
+              transition={{ delay: 0.25 }}
+              className="bg-white border border-slate-150 p-4 rounded-[24px] flex flex-col justify-between hover:shadow-xl hover:border-blue-200 transition-all text-center h-full"
             >
               <div>
-                <div className="w-14 h-14 rounded-full bg-blue-50/70 border border-blue-100 flex items-center justify-center mb-5 mx-auto text-blue-600">
-                  <UserCheck className="w-6 h-6" />
+                <div className="w-12 h-12 rounded-full bg-blue-50/70 border border-blue-100 flex items-center justify-center mb-3 mx-auto text-blue-600">
+                  <UserCheck className="w-5 h-5" />
                 </div>
-                <h5 className="font-bold text-slate-900 text-xl mb-4">个人智能体</h5>
+                <h5 className="font-bold text-slate-900 text-base mb-3">个人智能体</h5>
                 
-                <div className="space-y-2 mb-8 text-slate-500 text-sm inline-block text-left">
-                  <div className="flex items-center gap-2 text-slate-600 font-medium">
-                    <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0" />
+                <div className="space-y-1.5 mb-4 text-slate-500 text-xs inline-block text-left">
+                  <div className="flex items-center gap-1.5 text-slate-600 font-medium">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-blue-500 shrink-0" />
                     <span>AI 帮讲故事</span>
                   </div>
-                  <div className="flex items-center gap-2 text-slate-600 font-medium">
-                    <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0" />
+                  <div className="flex items-center gap-1.5 text-slate-600 font-medium">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-blue-500 shrink-0" />
                     <span>24h 在线接待</span>
                   </div>
-                  <div className="flex items-center gap-2 text-slate-600 font-medium">
-                    <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0" />
+                  <div className="flex items-center gap-1.5 text-slate-600 font-medium">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-blue-500 shrink-0" />
                     <span>咨询秒回撮合</span>
                   </div>
                 </div>
               </div>
 
               {/* Phone Mockup 4 */}
-              <div className="w-full max-w-[160px] mx-auto bg-gradient-to-br from-slate-200 to-slate-300 rounded-[32px] p-1.5 shadow-2xl overflow-hidden aspect-[9/18] text-left flex flex-col font-sans relative group cursor-pointer border border-slate-100">
-                <div className="w-full h-full bg-slate-100 rounded-[28px] overflow-hidden relative">
-                  {/* Side buttons */}
-                  <div className="absolute top-16 -left-0.5 w-0.5 h-6 bg-slate-400 rounded-full"></div>
-                  <div className="absolute top-28 -left-0.5 w-0.5 h-8 bg-slate-400 rounded-full"></div>
-                  <div className="absolute top-24 -right-0.5 w-0.5 h-10 bg-slate-400 rounded-full"></div>
-                  {/* Screen */}
+              <div className="w-full max-w-[120px] mx-auto bg-gradient-to-br from-slate-200 to-slate-300 rounded-[24px] p-1 shadow-2xl overflow-hidden aspect-[9/18] text-left flex flex-col font-sans relative group cursor-pointer border border-slate-100">
+                <div className="w-full h-full bg-slate-100 rounded-[20px] overflow-hidden relative">
+                  <div className="absolute top-12 -left-0.5 w-0.5 h-4 bg-slate-400 rounded-full"></div>
+                  <div className="absolute top-20 -left-0.5 w-0.5 h-6 bg-slate-400 rounded-full"></div>
+                  <div className="absolute top-18 -right-0.5 w-0.5 h-8 bg-slate-400 rounded-full"></div>
                   <img src="./个人智能体.png" alt="个人智能体" className="w-full h-full object-cover" />
                 </div>
               </div>
             </motion.div>
-
-            {/* Card 5: 诊所/药店智能体 */}
-            <motion.div 
-              {...fadeIn} 
-              transition={{ delay: 0.25 }}
-              className="bg-white border border-slate-150 p-6 rounded-[32px] flex flex-col justify-between hover:shadow-xl hover:border-blue-200 transition-all text-center h-full"
-            >
-              <div>
-                <div className="w-14 h-14 rounded-full bg-blue-50/70 border border-blue-100 flex items-center justify-center mb-5 mx-auto text-blue-600">
-                  <Activity className="w-6 h-6" />
-                </div>
-                <h5 className="font-bold text-slate-900 text-xl mb-4">诊所/药店智能体</h5>
-                
-                <div className="space-y-2 mb-8 text-slate-500 text-sm inline-block text-left">
-                  <div className="flex items-center gap-2 text-slate-600 font-medium">
-                    <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0" />
-                    <span>预约挂号与候诊提醒</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-slate-600 font-medium">
-                    <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0" />
-                    <span>健康咨询与用药指导</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-slate-600 font-medium">
-                    <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0" />
-                    <span>院内导航与位置指引</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Tablet Mockup 5 */}
-              <div className="w-full max-w-[280px] mx-auto bg-gradient-to-br from-slate-200 to-slate-300 rounded-[20px] p-1 shadow-2xl overflow-hidden aspect-[4/3] text-left flex flex-col font-sans relative group cursor-pointer border border-slate-300 -mt-16">
-                <div className="w-full h-full bg-slate-100 rounded-[12px] overflow-hidden relative">
-                  {/* Front camera */}
-                  <div className="absolute top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-slate-400 rounded-full z-10"></div>
-                  {/* Screen */}
-                  <img src="./2.png" alt="诊所药店智能体" className="w-full h-full object-cover" />
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Card 6: B端工作台 */}
-            <motion.div 
-              {...fadeIn} 
-              transition={{ delay: 0.3 }}
-              className="bg-white border border-slate-150 p-6 rounded-[32px] flex flex-col justify-between hover:shadow-xl hover:border-blue-200 transition-all text-center h-full"
-            >
-              <div>
-                <div className="w-14 h-14 rounded-full bg-blue-50/70 border border-blue-100 flex items-center justify-center mb-5 mx-auto text-blue-600">
-                  <LayoutDashboard className="w-6 h-6" />
-                </div>
-                <h5 className="font-bold text-slate-900 text-xl mb-4">B端工作台</h5>
-                
-                <div className="space-y-2 mb-8 text-slate-500 text-sm inline-block text-left">
-                  <div className="flex items-center gap-2 text-slate-600 font-medium">
-                    <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0" />
-                    <span>经营数据看板</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-slate-600 font-medium">
-                    <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0" />
-                    <span>客户画像管理</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-slate-600 font-medium">
-                    <CheckCircle2 className="w-4 h-4 text-blue-500 shrink-0" />
-                    <span>营销工具配置</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Phone Mockup 6 */}
-              <div className="w-full max-w-[160px] mx-auto bg-gradient-to-br from-slate-200 to-slate-300 rounded-[32px] p-1.5 shadow-2xl overflow-hidden aspect-[9/18] text-left flex flex-col font-sans relative group cursor-pointer border border-slate-100">
-                <div className="w-full h-full bg-slate-100 rounded-[28px] overflow-hidden relative">
-                  {/* Side buttons */}
-                  <div className="absolute top-16 -left-0.5 w-0.5 h-6 bg-slate-400 rounded-full"></div>
-                  <div className="absolute top-28 -left-0.5 w-0.5 h-8 bg-slate-400 rounded-full"></div>
-                  <div className="absolute top-24 -right-0.5 w-0.5 h-10 bg-slate-400 rounded-full"></div>
-                  {/* Screen */}
-                  <img src="./3.png" alt="B端工作台" className="w-full h-full object-cover" />
-                </div>
-              </div>
-            </motion.div>
           </div>
+
+          {/* 第三层：B端工作台 - 全宽展示 */}
+          <motion.div 
+            {...fadeIn} 
+            transition={{ delay: 0.35 }}
+            className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 p-6 rounded-[24px] hover:shadow-xl transition-all"
+          >
+            <div className="flex flex-col md:flex-row items-center gap-6">
+              <div className="flex-1">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 rounded-full bg-blue-100 border border-blue-200 flex items-center justify-center text-blue-600">
+                    <LayoutDashboard className="w-6 h-6" />
+                  </div>
+                  <h5 className="font-bold text-slate-900 text-xl">B端工作台</h5>
+                </div>
+                <p className="text-slate-600 text-sm mb-4 leading-relaxed">
+                  为酒店、景区、餐饮等商家提供一站式管理后台，实现数据可视化、客户画像分析、营销活动配置等功能，助力商家精细化运营。
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-white border border-blue-200 rounded-full text-xs text-blue-600 font-medium">经营数据看板</span>
+                  <span className="px-3 py-1 bg-white border border-blue-200 rounded-full text-xs text-blue-600 font-medium">客户画像管理</span>
+                  <span className="px-3 py-1 bg-white border border-blue-200 rounded-full text-xs text-blue-600 font-medium">营销工具配置</span>
+                  <span className="px-3 py-1 bg-white border border-blue-200 rounded-full text-xs text-blue-600 font-medium">订单管理</span>
+                </div>
+              </div>
+              <div className="w-full md:w-auto flex justify-center">
+                <div className="w-full max-w-[140px] bg-gradient-to-br from-slate-200 to-slate-300 rounded-[28px] p-1.5 shadow-2xl overflow-hidden aspect-[9/18] text-left flex flex-col font-sans relative group cursor-pointer border border-slate-100">
+                  <div className="w-full h-full bg-slate-100 rounded-[24px] overflow-hidden relative">
+                    {/* Side buttons */}
+                    <div className="absolute top-14 -left-0.5 w-0.5 h-5 bg-slate-400 rounded-full"></div>
+                    <div className="absolute top-24 -left-0.5 w-0.5 h-7 bg-slate-400 rounded-full"></div>
+                    <div className="absolute top-20 -right-0.5 w-0.5 h-9 bg-slate-400 rounded-full"></div>
+                    <img src="./3.png" alt="B端工作台" className="w-full h-full object-cover" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
 
         {/* 3. Operational Achievements Dashboard */}
@@ -690,26 +786,26 @@ export default function App() {
                 <span className="text-sm font-medium text-slate-600">景区上线成效</span>
               </div>
               <div className="flex items-baseline gap-1 mb-4">
-                <span className="text-4xl font-extrabold text-slate-900">17</span>
+                <span className="text-4xl font-extrabold text-slate-900">29</span>
                 <span className="text-lg font-medium text-slate-500">家全省级重点景区</span>
               </div>
               <p className="text-sm text-slate-500 leading-relaxed">
-                智能体已在 <span className="font-semibold text-slate-700">黄果树大瀑布</span>、<span className="font-semibold text-slate-700">荔波小七孔</span>、<span className="font-semibold text-slate-700">西江千户苗寨</span> 等 17 家旗舰及重点景区成功上线运行。
+                智能体已在黄果树大瀑布、荔波小七孔、西江千户苗寨等29家重点景区成功上线运行，年内覆盖全省主要景区。
               </p>
             </motion.div>
 
-            {/* Card 4: 集成线上商品 */}
+            {/* Card 4: 汇聚商品 */}
             <motion.div {...fadeIn} transition={{ delay: 0.15 }} className="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
               <div className="flex items-center gap-2 mb-4">
                 <ShoppingCart className="w-5 h-5 text-emerald-500" />
-                <span className="text-sm font-medium text-slate-600">集成线上商品</span>
+                <span className="text-sm font-medium text-slate-600">汇聚商品</span>
               </div>
               <div className="flex items-baseline gap-1 mb-4">
                 <span className="text-4xl font-extrabold text-slate-900">8.2</span>
-                <span className="text-lg font-medium text-slate-500">万个分销商品</span>
+                <span className="text-lg font-medium text-slate-500">万个旅游商品</span>
               </div>
               <p className="text-sm text-slate-500 leading-relaxed">
-                汇聚智慧文旅基础数据 10.1 万项，安全覆盖与保障支撑省内 <span className="font-semibold text-slate-700">3.2 万家</span> 餐饮、酒店及出行路线文旅服务商。
+                组织强大的商品供应保障体系，接入全省旅游商品8.2万个，覆盖旅游服务企业3.2万家。
               </p>
             </motion.div>
           </div>
@@ -804,7 +900,7 @@ export default function App() {
                   <Star className="w-4.5 h-4.5 text-amber-500 fill-amber-500" /> 景区上线成效：
                 </div>
                 <p className="text-slate-700 text-[15px] md:text-base leading-relaxed">
-                  景区智能体已在 <span className="font-semibold text-slate-900 font-sans">黄果树大瀑布</span>、<span className="font-semibold text-slate-900 font-sans">荔波小七孔</span>、<span className="font-semibold text-slate-900 font-sans">西江千户苗寨</span> 等共计 <span className="font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-full text-xs md:text-sm">17 家全省旗舰/重点景区</span> 成功上线并同步启动运行及测试。
+                  景区智能体已在黄果树大瀑布、荔波小七孔、西江千户苗寨等29家重点景区成功上线运行，年内覆盖全省主要景区。
                 </p>
               </div>
             </motion.div>
@@ -916,50 +1012,241 @@ export default function App() {
             className="mt-8 border border-dashed border-blue-200 bg-[#edf5ff]/25 rounded-[18px] py-6 px-8 text-center flex items-center justify-center shadow-[inset_0_1px_3px_rgba(59,130,246,0.01)]"
           >
             <p className="text-[#1d4ed8] font-bold text-base md:text-[17px] tracking-wide select-none">
-              类比：≈ “你自己的豆包 + 客服 + 导游 + 营销助手”
+              类比:≈"你自己的豆包+24小时客服+自动营销助手"
             </p>
           </motion.div>
         </motion.div>
-
-
-
-        {/* 为什么选黄小西智能体对比表格 */}
-        <div className="mt-12 space-y-8 mb-16">
-          <div className="text-center">
-            <h3 className="text-3xl md:text-4xl font-extrabold text-slate-900 font-display mb-4">为什么选黄小西智能体？</h3>
-            <p className="text-lg text-slate-500">看清本质区别，不做被动流量的搬运工</p>
-          </div>
-          
-          <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
-            <div className="grid grid-cols-3 bg-slate-50 border-b border-slate-200">
-              <div className="p-4 md:p-6 text-slate-500 font-medium text-sm md:text-base border-r border-slate-200">维度对比</div>
-              <div className="p-4 md:p-6 text-slate-900 font-bold text-center text-sm md:text-base border-r border-slate-200">传统 OTA (公域)</div>
-              <div className="p-4 md:p-6 text-blue-600 font-bold text-center text-sm md:text-base bg-blue-50">黄小西智能体 (私域)</div>
-            </div>
-            {[
-              { dim: "流量属性", ota: "平台公域，谁便宜买谁", agent: "酒店专属私域，做老客沉淀" },
-              { dim: "佣金政策", ota: "按单结算，高额抽成", agent: "0 佣金，收益全额归酒店" },
-              { dim: "服务深度", ota: "仅限订房单一功能", agent: "24h 服务管家 + 全域消费" },
-              { dim: "关系链", ota: "客户属于平台", agent: "客户属于酒店私域流量池" },
-              { dim: "核心目的", ota: "帮你找新客 (要流量)", agent: "帮你留老客 (降本增效)" },
-            ].map((row, idx) => (
-              <div key={idx} className={`grid grid-cols-3 ${idx !== 4 ? 'border-b border-slate-200' : ''}`}>
-                <div className="p-4 md:p-6 text-slate-600 font-medium text-sm md:text-base border-r border-slate-200 bg-slate-50/50">{row.dim}</div>
-                <div className="p-4 md:p-6 text-slate-600 text-center text-sm md:text-base border-r border-slate-200">{row.ota}</div>
-                <div className="p-4 md:p-6 text-slate-900 font-semibold text-center text-sm md:text-base bg-blue-50/30">{row.agent}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-
       </Section>
 
-      {/* --- SECTION IV: CORE VALUES --- */}
+      {/* --- SECTION IV: PRODUCT FEATURES --- */}
+      <Section id="features" className="bg-slate-50 py-24">
+        <motion.div {...fadeIn} className="text-center mb-16">
+          <h2 className="text-blue-600 font-bold tracking-tight text-3xl md:text-4xl mb-6 font-display">四、产品功能</h2>
+          <h3 className="text-xl md:text-2xl text-slate-500 font-medium">三大终端，全方位覆盖酒店经营场景</h3>
+        </motion.div>
+
+        {/* 功能模块1：服务好住客 */}
+        <motion.div {...fadeIn} className="bg-white rounded-[24px] p-8 md:p-10 mb-8 shadow-sm border border-slate-100 hover:shadow-lg transition-shadow duration-300">
+          <div className="flex flex-col lg:flex-row items-center gap-8">
+            {/* 左侧：功能描述 */}
+            <div className="flex-1 w-full">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-sky-400 to-blue-500 flex items-center justify-center text-white shadow-lg shadow-blue-200">
+                  <Smartphone className="w-6 h-6" />
+                </div>
+                <div>
+                  <h4 className="text-xl font-bold text-slate-800">服务好住客</h4>
+                  <span className="text-xs text-slate-400 font-medium">面向对象：酒店入住宾客</span>
+                </div>
+              </div>
+
+              <div className="space-y-3">
+                <div className="flex items-start gap-4 p-4 rounded-xl bg-slate-50/70 hover:bg-slate-50 transition-colors">
+                  <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-sm">
+                    <span className="text-blue-500 font-bold">01</span>
+                  </div>
+                  <div>
+                    <h5 className="font-semibold text-slate-800 mb-1">智能问答</h5>
+                    <p className="text-slate-500 text-sm leading-relaxed">支持住客通过自然语言交互，便捷完成酒店信息查询。</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4 p-4 rounded-xl bg-slate-50/70 hover:bg-slate-50 transition-colors">
+                  <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-sm">
+                    <span className="text-blue-500 font-bold">02</span>
+                  </div>
+                  <div>
+                    <h5 className="font-semibold text-slate-800 mb-1">客房服务</h5>
+                    <p className="text-slate-500 text-sm leading-relaxed">住客可通过智能体一键下单，让客房服务像点外卖一样简单，提升服务效率与顾客体验。</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4 p-4 rounded-xl bg-slate-50/70 hover:bg-slate-50 transition-colors">
+                  <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-sm">
+                    <span className="text-blue-500 font-bold">03</span>
+                  </div>
+                  <div>
+                    <h5 className="font-semibold text-slate-800 mb-1">智能服务团队</h5>
+                    <p className="text-slate-500 text-sm leading-relaxed">整合本地推荐官、深夜助眠、会议助手等智能体员工，为住客提供专业、精准的场景化服务。</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4 p-4 rounded-xl bg-slate-50/70 hover:bg-slate-50 transition-colors">
+                  <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-sm">
+                    <span className="text-blue-500 font-bold">04</span>
+                  </div>
+                  <div>
+                    <h5 className="font-semibold text-slate-800 mb-1">吐槽评价</h5>
+                    <p className="text-slate-500 text-sm leading-relaxed">住客可即时提交意见与建议，酒店快速响应并落实整改，持续优化住宿体验。</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4 p-4 rounded-xl bg-slate-50/70 hover:bg-slate-50 transition-colors">
+                  <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-sm">
+                    <span className="text-blue-500 font-bold">05</span>
+                  </div>
+                  <div>
+                    <h5 className="font-semibold text-slate-800 mb-1">周边推荐</h5>
+                    <p className="text-slate-500 text-sm leading-relaxed">向游客精准推荐本地特色美食、休闲文娱活动及网红打卡点位。</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4 p-4 rounded-xl bg-slate-50/70 hover:bg-slate-50 transition-colors">
+                  <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-sm">
+                    <span className="text-blue-500 font-bold">06</span>
+                  </div>
+                  <div>
+                    <h5 className="font-semibold text-slate-800 mb-1">订房购物</h5>
+                    <p className="text-slate-500 text-sm leading-relaxed">支持在线房型预订与酒店自营商品、旅游产品在线选购；</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* 右侧：手机机模 */}
+            <div className="w-full lg:w-[260px] flex justify-center shrink-0">
+              <div className="w-full max-w-[220px] bg-gradient-to-b from-slate-300 to-slate-400 rounded-[32px] p-2 shadow-2xl overflow-hidden aspect-[9/19] relative">
+                <div className="w-full h-full bg-white rounded-[28px] overflow-hidden relative">
+                  <img src="./2.jpg" alt="服务好住客" className="w-full h-full object-cover" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* 功能模块2：管理好酒店 */}
+        <motion.div {...fadeIn} transition={{ delay: 0.1 }} className="bg-white rounded-[24px] p-8 md:p-10 mb-8 shadow-sm border border-slate-100 hover:shadow-lg transition-shadow duration-300">
+          <div className="flex flex-col lg:flex-row items-center gap-8">
+            {/* 左侧：功能描述 */}
+            <div className="flex-1 w-full">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-violet-400 to-purple-500 flex items-center justify-center text-white shadow-lg shadow-purple-200">
+                  <UserCog className="w-6 h-6" />
+                </div>
+                <div>
+                  <h4 className="text-xl font-bold text-slate-800">管理好酒店</h4>
+                  <span className="text-xs text-slate-400 font-medium">面向对象：酒店管理人员、酒店老板</span>
+                </div>
+              </div>
+
+              <div className="space-y-3">
+                <div className="flex items-start gap-4 p-4 rounded-xl bg-slate-50/70 hover:bg-slate-50 transition-colors">
+                  <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-sm">
+                    <span className="text-purple-500 font-bold">01</span>
+                  </div>
+                  <div>
+                    <h5 className="font-semibold text-slate-800 mb-1">工单与服务管理</h5>
+                    <p className="text-slate-500 text-sm leading-relaxed">集成客房工单处理、吐槽内容管理、行李寄存管理、订单扫码核销等功能，实现工作服务便捷处理</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4 p-4 rounded-xl bg-slate-50/70 hover:bg-slate-50 transition-colors">
+                  <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-sm">
+                    <span className="text-purple-500 font-bold">02</span>
+                  </div>
+                  <div>
+                    <h5 className="font-semibold text-slate-800 mb-1">订单与交易管理</h5>
+                    <p className="text-slate-500 text-sm leading-relaxed">支持订房订单、零售订单、服务订单的快捷移动端处理。</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4 p-4 rounded-xl bg-slate-50/70 hover:bg-slate-50 transition-colors">
+                  <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-sm">
+                    <span className="text-purple-500 font-bold">03</span>
+                  </div>
+                  <div>
+                    <h5 className="font-semibold text-slate-800 mb-1">前台记事交班助手</h5>
+                    <p className="text-slate-500 text-sm leading-relaxed">酒店员工可通过自然语言对话向智能体表述事件，AI自动拆解出需求形成待办清单，同时能够实现一键交班及任务进度实时追踪。</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4 p-4 rounded-xl bg-slate-50/70 hover:bg-slate-50 transition-colors">
+                  <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-sm">
+                    <span className="text-purple-500 font-bold">04</span>
+                  </div>
+                  <div>
+                    <h5 className="font-semibold text-slate-800 mb-1">老板助手</h5>
+                    <p className="text-slate-500 text-sm leading-relaxed">为酒店老板提供竞价助手、酒店运营数据看板，帮助老板酒店管理一目了然。</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4 p-4 rounded-xl bg-slate-50/70 hover:bg-slate-50 transition-colors">
+                  <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-sm">
+                    <span className="text-purple-500 font-bold">05</span>
+                  </div>
+                  <div>
+                    <h5 className="font-semibold text-slate-800 mb-1">订房订单管理</h5>
+                    <p className="text-slate-500 text-sm leading-relaxed">集中处理房态房价、订房订单</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4 p-4 rounded-xl bg-slate-50/70 hover:bg-slate-50 transition-colors">
+                  <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-sm">
+                    <span className="text-purple-500 font-bold">06</span>
+                  </div>
+                  <div>
+                    <h5 className="font-semibold text-slate-800 mb-1">权限管理</h5>
+                    <p className="text-slate-500 text-sm leading-relaxed">组织架构与系统权限配置</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* 右侧：手机机模 */}
+            <div className="w-full lg:w-[260px] flex justify-center shrink-0">
+              <div className="w-full max-w-[220px] bg-gradient-to-b from-slate-300 to-slate-400 rounded-[32px] p-2 shadow-2xl overflow-hidden aspect-[9/19] relative">
+                <div className="w-full h-full bg-white rounded-[28px] overflow-hidden relative">
+                  <img src="./12.jpg" alt="管理好酒店" className="w-full h-full object-cover" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* 功能模块3：增加收入 */}
+        <motion.div {...fadeIn} transition={{ delay: 0.2 }} className="bg-white rounded-[24px] p-6 md:p-8 shadow-sm border border-slate-100 hover:shadow-lg transition-shadow duration-300">
+          <div className="flex flex-col lg:flex-row items-start gap-6">
+            {/* 左侧：功能描述 */}
+            <div className="lg:w-[40%] w-full">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-400 to-teal-500 flex items-center justify-center text-white shadow-lg shadow-emerald-200">
+                  <Monitor className="w-5 h-5" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-slate-800">增加收入</h4>
+                  <span className="text-xs text-slate-400 font-medium">面向对象：酒店管理人员、酒店老板</span>
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                <div className="flex items-start gap-3 p-3 rounded-xl bg-slate-50/70 hover:bg-slate-50 transition-colors">
+                  <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shrink-0 shadow-sm">
+                    <span className="text-emerald-500 font-bold text-sm">01</span>
+                  </div>
+                  <div>
+                    <h5 className="font-semibold text-slate-800 text-sm mb-1">自营商城</h5>
+                    <p className="text-slate-500 text-sm leading-relaxed">酒店可自主装修自营商城首页，并自行上架商品，打造专属线上销售渠道。</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3 p-3 rounded-xl bg-slate-50/70 hover:bg-slate-50 transition-colors">
+                  <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shrink-0 shadow-sm">
+                    <span className="text-emerald-500 font-bold text-sm">02</span>
+                  </div>
+                  <div>
+                    <h5 className="font-semibold text-slate-800 text-sm mb-1">平台商城</h5>
+                    <p className="text-slate-500 text-sm leading-relaxed">酒店不但可作为平台供应商，自主装修商城首页并上架商品，面向其他酒店开放采购，让别的酒店为你卖货。还能一键接入热门景区门票、精品线路、本地特产等资源，不囤货、不压货，赚取更多收入。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* 右侧：平板机模 */}
+            <div className="lg:w-[60%] w-full flex justify-center">
+              <div className="w-full max-w-[520px] bg-gradient-to-b from-slate-300 to-slate-400 rounded-[28px] p-2.5 shadow-2xl overflow-hidden relative">
+                <div className="w-full bg-white rounded-[24px] overflow-hidden relative">
+                  <img src="./10.png" alt="增加收入" className="w-full h-auto object-cover" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </Section>
+
+      {/* --- SECTION V: CORE VALUES --- */}
       <div className="bg-slate-50 py-24" id="values">
         <Section>
           <motion.div {...fadeIn} className="text-center mb-20">
-            <h2 className="text-blue-600 font-bold tracking-tight text-3xl md:text-4xl mb-6 font-display">四、核心价值</h2>
+            <h2 className="text-blue-600 font-bold tracking-tight text-3xl md:text-4xl mb-6 font-display">五、核心价值</h2>
             <h3 className="text-xl md:text-2xl text-slate-500 font-medium">降本 · 增效 · 增收</h3>
           </motion.div>
 
@@ -976,7 +1263,7 @@ export default function App() {
                   glowDot: "bg-rose-500",
                   cards: [
                     { id: "降低人力成本", title: "降低人力成本", content: "24小时秒级响应，减少前台60%以上重复工作量；实现旺季不加人、夜班精简。", icon: Users },
-                    { id: "降低管理成本", title: "降低管理成本", content: "需求自动转工单，系统自动派单进度可查，省去中转沟通，减少内耗与人为差错。", icon: Settings },
+                    { id: "降低管理成本", title: "降低管理成本", content: "用AI自动承接高频咨询、智能派单、减少人工重复劳动，直接降低人力与沟通成本，实现酒店管理降本增效。", icon: Settings },
                     { id: "降低佣金成本", title: "降低佣金成本", content: "支持私域自营订房，老客续房零佣金，甩开在线渠道平台高额抽成。", icon: Wallet }
                   ]
                 },
@@ -988,8 +1275,8 @@ export default function App() {
                   textAccent: "text-blue-600 font-bold",
                   glowDot: "bg-blue-500",
                   cards: [
-                    { id: "服务更高效", title: "服务更高效", content: "AI秒级应答，住客无需等待；智能定制行程，推送周边贴心服务。", icon: Clock },
-                    { id: "吐槽管理更高效", title: "吐槽管理更高效", content: "住客负面评价先沉淀在智能体内部，酒店可第一时间响应处理，避免差评发酵至 OTA 平台，有效提升酒店评分与口碑。", icon: Zap },
+                    { id: "服务更高效", title: "服务更高效", content: "通过AI秒级应答让住客无需等待，并可智能定制行程、推送周边贴心服务，实现全程高效、便捷、有温度的一站式体验。", icon: Clock },
+                    { id: "控评管理更高效", title: "控评管理更高效", content: "住客负面评价先沉淀在智能体内部，酒店可第一时间响应处理，避免差评发酵至 OTA 平台，有效提升酒店评分与口碑。", icon: Zap },
                     { id: "口碑提升更高效", title: "口碑提升更高效", content: "住客离店时 '碰一碰' 二维码，自动生成好评文案，便捷引导至 OTA 平台评价，快速提升酒店好评率与排名。", icon: Star },
                     { id: "运营更高效", title: "运营更高效", content: "数据可视化分析，把握住客喜好，提供竞价分析，决策更精准。", icon: LineChart }
                   ]
@@ -1102,8 +1389,8 @@ export default function App() {
                       <img src="./04.jpg" alt="服务更高效" className="w-full h-full object-cover" />
                     )}
 
-                    {activeCardId === "吐槽管理更高效" && (
-                      <img src="https://stimg.de/img/2026/05/22/RwSVS.jpg" alt="吐槽管理更高效" className="w-full h-full object-cover" />
+                    {activeCardId === "控评管理更高效" && (
+                      <img src="https://stimg.de/img/2026/05/22/RwSVS.jpg" alt="控评管理更高效" className="w-full h-full object-cover" />
                     )}
 
                     {activeCardId === "口碑提升更高效" && (
@@ -1135,7 +1422,7 @@ export default function App() {
       {/* --- SECTION VII: CASES --- */}
       <Section className="bg-slate-50 border-t border-slate-200" id="cases">
         <motion.div {...fadeIn} className="text-center mb-16">
-          <h2 className="text-blue-600 font-bold tracking-tight text-3xl md:text-4xl mb-6 font-display">五、合作案例</h2>
+          <h2 className="text-blue-600 font-bold tracking-tight text-3xl md:text-4xl mb-6 font-display">六、合作案例</h2>
           <h3 className="text-xl md:text-2xl text-slate-500 font-medium tracking-tight">AI 智能体落地实测数据与反馈</h3>
         </motion.div>
         
@@ -1256,7 +1543,7 @@ export default function App() {
       {/* --- SECTION VI: PARTNERSHIP --- */}
       <Section id="partnership" className="bg-white border-t border-slate-150">
         <motion.div {...fadeIn} className="text-center mb-16">
-          <h2 className="text-blue-600 font-bold tracking-tight text-3xl md:text-4xl mb-6 font-display">六、合作方式</h2>
+          <h2 className="text-blue-600 font-bold tracking-tight text-3xl md:text-4xl mb-6 font-display">七、合作方式</h2>
           <h3 className="text-xl md:text-2xl text-slate-500 font-medium tracking-tight">我们不做一锤子买卖，我们愿意和拥抱数字化的酒店共同成长。</h3>
         </motion.div>
 
