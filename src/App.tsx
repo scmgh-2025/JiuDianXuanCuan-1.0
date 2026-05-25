@@ -714,23 +714,28 @@ export default function App() {
                   <h5 className="font-bold text-slate-900 text-xl">B端工作台</h5>
                 </div>
                 <p className="text-slate-600 text-sm mb-4 leading-relaxed">
-                  为酒店、景区、餐饮等商家提供一站式管理后台，实现数据可视化、客户画像分析、营销活动配置等功能，助力商家精细化运营。
+                  为酒店、景区、餐饮等商家提供B端工作台，工作台配置了多个专业 AI 角色，形成虚拟员工团队，助力商家精细化运营。
                 </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-white border border-blue-200 rounded-full text-xs text-blue-600 font-medium">经营数据看板</span>
-                  <span className="px-3 py-1 bg-white border border-blue-200 rounded-full text-xs text-blue-600 font-medium">客户画像管理</span>
-                  <span className="px-3 py-1 bg-white border border-blue-200 rounded-full text-xs text-blue-600 font-medium">营销工具配置</span>
-                  <span className="px-3 py-1 bg-white border border-blue-200 rounded-full text-xs text-blue-600 font-medium">订单管理</span>
-                </div>
               </div>
-              <div className="w-full md:w-auto flex justify-center">
+              <div className="w-full md:w-auto flex justify-center gap-4">
+                {/* 左侧机模 */}
                 <div className="w-full max-w-[140px] bg-gradient-to-br from-slate-200 to-slate-300 rounded-[28px] p-1.5 shadow-2xl overflow-hidden aspect-[9/18] text-left flex flex-col font-sans relative group cursor-pointer border border-slate-100">
                   <div className="w-full h-full bg-slate-100 rounded-[24px] overflow-hidden relative">
                     {/* Side buttons */}
                     <div className="absolute top-14 -left-0.5 w-0.5 h-5 bg-slate-400 rounded-full"></div>
                     <div className="absolute top-24 -left-0.5 w-0.5 h-7 bg-slate-400 rounded-full"></div>
                     <div className="absolute top-20 -right-0.5 w-0.5 h-9 bg-slate-400 rounded-full"></div>
-                    <img src="./3.png" alt="B端工作台" className="w-full h-full object-cover" />
+                    <img src="./11.png" alt="B端工作台-左" className="w-full h-full object-cover" />
+                  </div>
+                </div>
+                {/* 右侧机模 */}
+                <div className="w-full max-w-[140px] bg-gradient-to-br from-slate-200 to-slate-300 rounded-[28px] p-1.5 shadow-2xl overflow-hidden aspect-[9/18] text-left flex flex-col font-sans relative group cursor-pointer border border-slate-100">
+                  <div className="w-full h-full bg-slate-100 rounded-[24px] overflow-hidden relative">
+                    {/* Side buttons */}
+                    <div className="absolute top-14 -left-0.5 w-0.5 h-5 bg-slate-400 rounded-full"></div>
+                    <div className="absolute top-24 -left-0.5 w-0.5 h-7 bg-slate-400 rounded-full"></div>
+                    <div className="absolute top-20 -right-0.5 w-0.5 h-9 bg-slate-400 rounded-full"></div>
+                    <img src="./12.png" alt="B端工作台-右" className="w-full h-full object-cover" />
                   </div>
                 </div>
               </div>
