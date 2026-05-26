@@ -259,7 +259,7 @@ export default function App() {
             <div className="w-8 h-8 rounded-full bg-rose-100 flex items-center justify-center shrink-0">
               <AlertCircle className="w-4 h-4" />
             </div>
-            <h4 className="text-2xl font-bold font-display text-slate-900">为什么酒店必须做AI升级？</h4>
+            <h4 className="text-2xl font-bold font-display text-slate-900">为什么酒店要做AI升级?</h4>
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
@@ -440,7 +440,7 @@ export default function App() {
 
               {/* Description */}
               <p className="text-blue-50 text-sm md:text-base leading-relaxed tracking-wide font-light mb-4">
-                贵州省官方文旅IP，具公信力并获高层考察认可。作为核心引擎，"酒店智能体"正依托全省（机场、高铁广告）强力推广，打造数字服务标杆。
+                贵州省官方文旅IP，具公信力并获高层考察认可。作为核心引擎，正全省(机场、高铁广告)强力推，打造数字服务标杆。
               </p>
 
               {/* Bottom highlights summary panel */}
@@ -1207,7 +1207,7 @@ export default function App() {
                   </div>
                   <div>
                     <h5 className="font-semibold text-slate-800 text-sm mb-1">自营商城</h5>
-                    <p className="text-slate-500 text-sm leading-relaxed">支持酒店自有商品等上架销售，无佣金，收益全部归酒店。</p>
+                    <p className="text-slate-500 text-sm leading-relaxed">打造酒店专属线上商城，自助售卖自有商品</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 p-3 rounded-xl bg-slate-50/70 hover:bg-slate-50 transition-colors">
@@ -1216,7 +1216,7 @@ export default function App() {
                   </div>
                   <div>
                     <h5 className="font-semibold text-slate-800 text-sm mb-1">平台商城</h5>
-                    <p className="text-slate-500 text-sm leading-relaxed">免费接入景区门票、本地特产、精品线路等优质资源，一键上架赚取稳定分润。</p>
+                    <p className="text-slate-500 text-sm leading-relaxed">免费接入官方供应链资源，零成本分销景区门票、精品线路、本地特产等商品</p>
                   </div>
                 </div>
               </div>
@@ -1278,10 +1278,10 @@ export default function App() {
                   textAccent: "text-blue-600 font-bold",
                   glowDot: "bg-blue-500",
                   cards: [
-                    { id: "服务更高效", title: "服务更高效", content: "通过AI秒级应答让住客无需等待，并可智能定制行程、推送周边贴心服务，实现全程高效、便捷、有温度的一站式体验。", icon: Clock },
+                    { id: "服务更高效", title: "服务更高效", content: "酒店智能体以AI秒级应答、智能派单、贴心行程与周边推荐，让服务响应更快、流程更顺、体验更好，全面提升酒店服务效率与口碑价值。", icon: Clock },
                     { id: "控评管理更高效", title: "控评管理更高效", content: "住客负面评价先沉淀在智能体内部，酒店可第一时间响应处理，避免差评发酵至 OTA 平台，有效提升酒店评分与口碑。", icon: Zap },
                     { id: "口碑提升更高效", title: "口碑提升更高效", content: "住客离店时 '碰一碰' 二维码，自动生成好评文案，便捷引导至 OTA 平台评价，快速提升酒店好评率与排名。", icon: Star },
-                    { id: "运营更高效", title: "运营更高效", content: "数据可视化分析，把握住客喜好，提供竞价分析，决策更精准。", icon: LineChart }
+                    { id: "运营更高效", title: "运营更高效", content: "支持管理人员随时查看员工工作情况、掌握周边竞价分析，助力精细化决策，让酒店整体运营更顺畅、更高效、更可控。", icon: LineChart }
                   ]
                 },
                 {
