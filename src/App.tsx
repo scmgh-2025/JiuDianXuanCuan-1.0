@@ -72,7 +72,7 @@ export default function App() {
     { id: "why-ai", label: "一、互联网1.0到AI时代" },
     { id: "guizhou-practice", label: "二、“黄小西”AI旅游服务生态" },
     { id: "positioning", label: "三、酒店智能体产品定位" },
-    { id: "features", label: "四、产品功能" },
+    { id: "features", label: "四、主要功能" },
     { id: "values", label: "五、核心价值" },
     { id: "cases", label: "六、合作案例" },
       { id: "partnership", label: "七、合作方式" },
@@ -225,34 +225,34 @@ export default function App() {
               <p className="text-lg">
                 <span className="font-semibold text-blue-600">AI已不再是实验室里的概念</span>，而是正在重塑各行各业，改变我们的生活。
               </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-                <div className="bg-white/80 rounded-2xl p-6 border border-blue-100 shadow-sm hover:shadow-md transition-shadow">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+                <div className="bg-white/80 rounded-2xl p-6 border border-blue-100 shadow-sm hover:shadow-md transition-shadow h-full flex flex-col">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-8 h-8 rounded-lg bg-emerald-100 flex items-center justify-center">
                       <TrendingUp className="w-4 h-4 text-emerald-600" />
                     </div>
                     <span className="font-semibold text-slate-800">AI巨头统治美股</span>
                   </div>
-                  <p className="text-slate-600 leading-relaxed">以英伟达、苹果、微软、谷歌、亚马逊、Meta和特斯拉组成的"七巨头"，总市值已突破<span className="font-bold text-emerald-600 text-lg">23万亿美元</span>，占标普500指数总市值的三分之一以上。</p>
+                  <p className="text-slate-600 leading-relaxed flex-1">以英伟达、苹果、微软、谷歌、亚马逊、Meta和特斯拉组成的"七巨头"，总市值已突破<span className="font-bold text-emerald-600 text-lg">23万亿美元</span>，占标普500指数总市值的三分之一以上。</p>
                 </div>
-                <div className="bg-white/80 rounded-2xl p-6 border border-blue-100 shadow-sm hover:shadow-md transition-shadow">
+                <div className="bg-white/80 rounded-2xl p-6 border border-blue-100 shadow-sm hover:shadow-md transition-shadow h-full flex flex-col">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-8 h-8 rounded-lg bg-amber-100 flex items-center justify-center">
                       <Zap className="w-4 h-4 text-amber-600" />
                     </div>
                     <span className="font-semibold text-slate-800">AI打破传统工作</span>
                   </div>
-                  <p className="text-slate-600 leading-relaxed">约<span className="font-bold text-amber-600 text-lg">28%</span>的常规重复性工作已通过AI实现完全自动化；目前全球已有<span className="font-bold text-amber-600 text-lg">3亿个</span>工作岗位受AI工具深度影响。</p>
+                  <p className="text-slate-600 leading-relaxed flex-1">约<span className="font-bold text-amber-600 text-lg">28%</span>的常规重复性工作已通过AI实现完全自动化；目前全球已有<span className="font-bold text-amber-600 text-lg">3亿个</span>工作岗位受AI工具深度影响。</p>
                 </div>
-              </div>
-              <div className="bg-white/80 rounded-2xl p-6 border border-blue-100 shadow-sm hover:shadow-md transition-shadow mt-6">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-8 h-8 rounded-lg bg-purple-100 flex items-center justify-center">
-                    <Rocket className="w-4 h-4 text-purple-600" />
+                <div className="bg-white/80 rounded-2xl p-6 border border-blue-100 shadow-sm hover:shadow-md transition-shadow h-full flex flex-col">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-8 h-8 rounded-lg bg-purple-100 flex items-center justify-center">
+                      <Rocket className="w-4 h-4 text-purple-600" />
+                    </div>
+                    <span className="font-semibold text-slate-800">AI延展普通人的能力</span>
                   </div>
-                  <span className="font-semibold text-slate-800">AI延展普通人的能力</span>
+                  <p className="text-slate-600 leading-relaxed flex-1">一个29岁中专生，仅凭一台电脑、3000元成本、10天时间，就独立制作出3分钟短片。上线数日，火遍海内外，连好莱坞的制作人都连夜寻求合作——<span className="font-semibold text-purple-600">在AI时代，一个人可以匹敌一支专业团队</span>。</p>
                 </div>
-                <p className="text-slate-600 leading-relaxed">一个29岁中专生，仅凭一台电脑、3000元成本、10天时间，就独立制作出3分钟短片。上线数日，火遍海内外，连好莱坞的制作人都连夜寻求合作——<span className="font-semibold text-purple-600">在AI时代，一个人可以匹敌一支专业团队</span>。</p>
               </div>
             </div>
           </motion.div>
@@ -505,7 +505,7 @@ export default function App() {
                 </div>
 
                 {/* 右侧：机模 */}
-                <div className="w-full max-w-[140px] bg-gradient-to-br from-slate-200 to-slate-300 rounded-[28px] p-1.5 shadow-2xl overflow-hidden aspect-[9/18] text-left flex flex-col font-sans relative group cursor-pointer border border-slate-100 shrink-0">
+                <div className="w-full max-w-[140px] bg-gradient-to-br from-slate-200 to-slate-300 rounded-[28px] p-1.5 shadow-2xl overflow-hidden aspect-[9/18] text-left flex flex-col font-sans relative group cursor-pointer border border-slate-100 shrink-0 transition-transform duration-300 hover:scale-[1.2] hover:z-10">
                   <div className="w-full h-full bg-slate-100 rounded-[24px] overflow-hidden relative">
                     <div className="absolute top-14 -left-0.5 w-0.5 h-5 bg-slate-400 rounded-full"></div>
                     <div className="absolute top-24 -left-0.5 w-0.5 h-7 bg-slate-400 rounded-full"></div>
@@ -571,7 +571,7 @@ export default function App() {
               </div>
 
               {/* Phone Mockup 1 */}
-              <div className="w-full max-w-[120px] mx-auto bg-gradient-to-br from-slate-200 to-slate-300 rounded-[24px] p-1 shadow-2xl overflow-hidden aspect-[9/18] text-left flex flex-col font-sans relative group cursor-pointer border border-slate-100">
+              <div className="w-full max-w-[120px] mx-auto bg-gradient-to-br from-slate-200 to-slate-300 rounded-[24px] p-1 shadow-2xl overflow-hidden aspect-[9/18] text-left flex flex-col font-sans relative group cursor-pointer border border-slate-100 transition-transform duration-300 hover:scale-[1.2] hover:z-10">
                 <div className="w-full h-full bg-slate-100 rounded-[20px] overflow-hidden relative">
                   <div className="absolute top-12 -left-0.5 w-0.5 h-4 bg-slate-400 rounded-full"></div>
                   <div className="absolute top-20 -left-0.5 w-0.5 h-6 bg-slate-400 rounded-full"></div>
@@ -610,7 +610,7 @@ export default function App() {
               </div>
 
               {/* Phone Mockup 2 */}
-              <div className="w-full max-w-[120px] mx-auto bg-gradient-to-br from-slate-200 to-slate-300 rounded-[24px] p-1 shadow-2xl overflow-hidden aspect-[9/18] text-left flex flex-col font-sans relative group cursor-pointer border border-slate-100">
+              <div className="w-full max-w-[120px] mx-auto bg-gradient-to-br from-slate-200 to-slate-300 rounded-[24px] p-1 shadow-2xl overflow-hidden aspect-[9/18] text-left flex flex-col font-sans relative group cursor-pointer border border-slate-100 transition-transform duration-300 hover:scale-[1.2] hover:z-10">
                 <div className="w-full h-full bg-slate-100 rounded-[20px] overflow-hidden relative">
                   <div className="absolute top-12 -left-0.5 w-0.5 h-4 bg-slate-400 rounded-full"></div>
                   <div className="absolute top-20 -left-0.5 w-0.5 h-6 bg-slate-400 rounded-full"></div>
@@ -649,7 +649,7 @@ export default function App() {
               </div>
 
               {/* Phone Mockup 3 */}
-              <div className="w-full max-w-[120px] mx-auto bg-gradient-to-br from-slate-200 to-slate-300 rounded-[24px] p-1 shadow-2xl overflow-hidden aspect-[9/18] text-left flex flex-col font-sans relative group cursor-pointer border border-slate-100">
+              <div className="w-full max-w-[120px] mx-auto bg-gradient-to-br from-slate-200 to-slate-300 rounded-[24px] p-1 shadow-2xl overflow-hidden aspect-[9/18] text-left flex flex-col font-sans relative group cursor-pointer border border-slate-100 transition-transform duration-300 hover:scale-[1.2] hover:z-10">
                 <div className="w-full h-full bg-slate-100 rounded-[20px] overflow-hidden relative">
                   <div className="absolute top-12 -left-0.5 w-0.5 h-4 bg-slate-400 rounded-full"></div>
                   <div className="absolute top-20 -left-0.5 w-0.5 h-6 bg-slate-400 rounded-full"></div>
@@ -688,7 +688,7 @@ export default function App() {
               </div>
 
               {/* Phone Mockup 4 */}
-              <div className="w-full max-w-[120px] mx-auto bg-gradient-to-br from-slate-200 to-slate-300 rounded-[24px] p-1 shadow-2xl overflow-hidden aspect-[9/18] text-left flex flex-col font-sans relative group cursor-pointer border border-slate-100">
+              <div className="w-full max-w-[120px] mx-auto bg-gradient-to-br from-slate-200 to-slate-300 rounded-[24px] p-1 shadow-2xl overflow-hidden aspect-[9/18] text-left flex flex-col font-sans relative group cursor-pointer border border-slate-100 transition-transform duration-300 hover:scale-[1.2] hover:z-10">
                 <div className="w-full h-full bg-slate-100 rounded-[20px] overflow-hidden relative">
                   <div className="absolute top-12 -left-0.5 w-0.5 h-4 bg-slate-400 rounded-full"></div>
                   <div className="absolute top-20 -left-0.5 w-0.5 h-6 bg-slate-400 rounded-full"></div>
@@ -717,9 +717,9 @@ export default function App() {
                   为酒店、景区、餐饮等商家提供B端工作台，工作台配置了多个专业 AI 角色，形成虚拟员工团队，助力商家精细化运营。
                 </p>
               </div>
-              <div className="w-full md:w-auto flex justify-center gap-4">
+              <div className="w-full md:w-auto flex justify-start gap-10 pl-0 md:pl-16">
                 {/* 左侧机模 */}
-                <div className="w-full max-w-[140px] bg-gradient-to-br from-slate-200 to-slate-300 rounded-[28px] p-1.5 shadow-2xl overflow-hidden aspect-[9/18] text-left flex flex-col font-sans relative group cursor-pointer border border-slate-100">
+                <div className="w-full max-w-[140px] bg-gradient-to-br from-slate-200 to-slate-300 rounded-[28px] p-1.5 shadow-2xl overflow-hidden aspect-[9/18] text-left flex flex-col font-sans relative group cursor-pointer border border-slate-100 transition-transform duration-300 hover:scale-[1.2] hover:z-10">
                   <div className="w-full h-full bg-slate-100 rounded-[24px] overflow-hidden relative">
                     {/* Side buttons */}
                     <div className="absolute top-14 -left-0.5 w-0.5 h-5 bg-slate-400 rounded-full"></div>
@@ -729,7 +729,7 @@ export default function App() {
                   </div>
                 </div>
                 {/* 右侧机模 */}
-                <div className="w-full max-w-[140px] bg-gradient-to-br from-slate-200 to-slate-300 rounded-[28px] p-1.5 shadow-2xl overflow-hidden aspect-[9/18] text-left flex flex-col font-sans relative group cursor-pointer border border-slate-100">
+                <div className="w-full max-w-[140px] bg-gradient-to-br from-slate-200 to-slate-300 rounded-[28px] p-1.5 shadow-2xl overflow-hidden aspect-[9/18] text-left flex flex-col font-sans relative group cursor-pointer border border-slate-100 transition-transform duration-300 hover:scale-[1.2] hover:z-10">
                   <div className="w-full h-full bg-slate-100 rounded-[24px] overflow-hidden relative">
                     {/* Side buttons */}
                     <div className="absolute top-14 -left-0.5 w-0.5 h-5 bg-slate-400 rounded-full"></div>
@@ -979,12 +979,12 @@ export default function App() {
               },
               {
                 icon: Clock,
-                title: "管理好酒店",
+                title: "运营好酒店",
                 desc: "为酒店配备 24 小时的数字员工"
               },
               {
                 icon: Target,
-                title: "增加收入",
+                title: "经营好受益",
                 desc: "接入优质旅游产品和通盘供应链，增加非房收入"
               }
             ].map((card, idx) => {
@@ -1026,8 +1026,7 @@ export default function App() {
       {/* --- SECTION IV: PRODUCT FEATURES --- */}
       <Section id="features" className="bg-slate-50 py-24">
         <motion.div {...fadeIn} className="text-center mb-16">
-          <h2 className="text-blue-600 font-bold tracking-tight text-3xl md:text-4xl mb-6 font-display">四、产品功能</h2>
-          <h3 className="text-xl md:text-2xl text-slate-500 font-medium">三大终端，全方位覆盖酒店经营场景</h3>
+          <h2 className="text-blue-600 font-bold tracking-tight text-3xl md:text-4xl mb-6 font-display">四、主要功能</h2>
         </motion.div>
 
         {/* 功能模块1：服务好住客 */}
@@ -1041,7 +1040,6 @@ export default function App() {
                 </div>
                 <div>
                   <h4 className="text-xl font-bold text-slate-800">服务好住客</h4>
-                  <span className="text-xs text-slate-400 font-medium">面向对象：酒店入住宾客</span>
                 </div>
               </div>
 
@@ -1114,7 +1112,7 @@ export default function App() {
           </div>
         </motion.div>
 
-        {/* 功能模块2：管理好酒店 */}
+        {/* 功能模块2：运营好酒店 */}
         <motion.div {...fadeIn} transition={{ delay: 0.1 }} className="bg-white rounded-[24px] p-8 md:p-10 mb-8 shadow-sm border border-slate-100 hover:shadow-lg transition-shadow duration-300">
           <div className="flex flex-col lg:flex-row items-center gap-8">
             {/* 左侧：功能描述 */}
@@ -1124,8 +1122,7 @@ export default function App() {
                   <UserCog className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-slate-800">管理好酒店</h4>
-                  <span className="text-xs text-slate-400 font-medium">面向对象：酒店管理人员、酒店老板</span>
+                  <h4 className="text-xl font-bold text-slate-800">运营好酒店</h4>
                 </div>
               </div>
 
@@ -1162,28 +1159,11 @@ export default function App() {
                     <span className="text-purple-500 font-bold">04</span>
                   </div>
                   <div>
-                    <h5 className="font-semibold text-slate-800 mb-1">老板助手</h5>
-                    <p className="text-slate-500 text-sm leading-relaxed">为酒店老板提供竞价助手、酒店运营数据看板，帮助老板酒店管理一目了然。</p>
+                    <h5 className="font-semibold text-slate-800 mb-1">管理人员助手</h5>
+                    <p className="text-slate-500 text-sm leading-relaxed">为酒店管理人员提供酒店运营数据统计、房价竞价、热点活动等功能，帮助酒店管理人员更好的管理酒店。</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4 p-4 rounded-xl bg-slate-50/70 hover:bg-slate-50 transition-colors">
-                  <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-sm">
-                    <span className="text-purple-500 font-bold">05</span>
-                  </div>
-                  <div>
-                    <h5 className="font-semibold text-slate-800 mb-1">订房订单管理</h5>
-                    <p className="text-slate-500 text-sm leading-relaxed">集中处理房态房价、订房订单</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4 p-4 rounded-xl bg-slate-50/70 hover:bg-slate-50 transition-colors">
-                  <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-sm">
-                    <span className="text-purple-500 font-bold">06</span>
-                  </div>
-                  <div>
-                    <h5 className="font-semibold text-slate-800 mb-1">权限管理</h5>
-                    <p className="text-slate-500 text-sm leading-relaxed">组织架构与系统权限配置</p>
-                  </div>
-                </div>
+
               </div>
             </div>
 
@@ -1191,14 +1171,14 @@ export default function App() {
             <div className="w-full lg:w-[260px] flex justify-center shrink-0">
               <div className="w-full max-w-[220px] bg-gradient-to-b from-slate-300 to-slate-400 rounded-[32px] p-2 shadow-2xl overflow-hidden aspect-[9/19] relative">
                 <div className="w-full h-full bg-white rounded-[28px] overflow-hidden relative">
-                  <img src="./12.jpg" alt="管理好酒店" className="w-full h-full object-cover" />
+                  <img src="./12.jpg" alt="运营好酒店" className="w-full h-full object-cover" />
                 </div>
               </div>
             </div>
           </div>
         </motion.div>
 
-        {/* 功能模块3：增加收入 */}
+        {/* 功能模块3：经营好受益 */}
         <motion.div {...fadeIn} transition={{ delay: 0.2 }} className="bg-white rounded-[24px] p-6 md:p-8 shadow-sm border border-slate-100 hover:shadow-lg transition-shadow duration-300">
           <div className="flex flex-col lg:flex-row items-start gap-6">
             {/* 左侧：功能描述 */}
@@ -1208,8 +1188,7 @@ export default function App() {
                   <Monitor className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-slate-800">增加收入</h4>
-                  <span className="text-xs text-slate-400 font-medium">面向对象：酒店管理人员、酒店老板</span>
+                  <h4 className="text-lg font-bold text-slate-800">经营好受益</h4>
                 </div>
               </div>
 
@@ -1235,11 +1214,22 @@ export default function App() {
               </div>
             </div>
 
-            {/* 右侧：平板机模 */}
-            <div className="lg:w-[60%] w-full flex justify-center">
-              <div className="w-full max-w-[520px] bg-gradient-to-b from-slate-300 to-slate-400 rounded-[28px] p-2.5 shadow-2xl overflow-hidden relative">
+            {/* 右侧：手机机模 + 平板机模 */}
+            <div className="lg:w-[60%] w-full flex justify-center items-center gap-6">
+              {/* 左侧手机机模 */}
+              <div className="w-full max-w-[140px] bg-gradient-to-br from-slate-200 to-slate-300 rounded-[28px] p-1.5 shadow-2xl overflow-hidden aspect-[9/18] text-left flex flex-col font-sans relative group cursor-pointer border border-slate-100 transition-transform duration-300 hover:scale-[1.2] hover:z-10">
+                <div className="w-full h-full bg-slate-100 rounded-[24px] overflow-hidden relative">
+                  {/* Side buttons */}
+                  <div className="absolute top-14 -left-0.5 w-0.5 h-5 bg-slate-400 rounded-full"></div>
+                  <div className="absolute top-24 -left-0.5 w-0.5 h-7 bg-slate-400 rounded-full"></div>
+                  <div className="absolute top-20 -right-0.5 w-0.5 h-9 bg-slate-400 rounded-full"></div>
+                  <img src="./gyl.png" alt="经营好受益-手机" className="w-full h-full object-cover" />
+                </div>
+              </div>
+              {/* 右侧平板机模 */}
+              <div className="w-full max-w-[520px] bg-gradient-to-b from-slate-300 to-slate-400 rounded-[28px] p-1.5 shadow-2xl overflow-hidden relative transition-transform duration-300 hover:scale-[1.2] hover:z-10">
                 <div className="w-full bg-white rounded-[24px] overflow-hidden relative">
-                  <img src="./10.png" alt="增加收入" className="w-full h-auto object-cover" />
+                  <img src="./10.png" alt="经营好受益" className="w-full h-auto object-cover" />
                 </div>
               </div>
             </div>
