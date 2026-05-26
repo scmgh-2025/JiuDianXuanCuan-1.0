@@ -149,9 +149,7 @@ export default function App() {
           <h2 className="text-blue-600 font-bold tracking-tight text-3xl md:text-4xl mb-6 font-display">一、互联网1.0到AI时代</h2>
           <div className="max-w-3xl mx-auto">
             <h4 className="text-lg md:text-xl font-bold text-slate-800 mb-2">从互联网1.0到AI时代，赋能酒店经营能力三次跃迁</h4>
-            <p className="text-slate-600 text-sm md:text-base leading-relaxed">
-              酒店行业的数字化发展，历经网页时代、OTA平台时代、AI智能体时代三个阶段，核心能力持续升级：
-            </p>
+
           </div>
         </motion.div>
 
@@ -1113,65 +1111,75 @@ export default function App() {
         </motion.div>
 
         {/* 功能模块2：运营好酒店 */}
-        <motion.div {...fadeIn} transition={{ delay: 0.1 }} className="bg-white rounded-[24px] p-8 md:p-10 mb-8 shadow-sm border border-slate-100 hover:shadow-lg transition-shadow duration-300">
-          <div className="flex flex-col lg:flex-row items-center gap-8">
+        <motion.div {...fadeIn} transition={{ delay: 0.1 }} className="bg-white rounded-[24px] p-6 md:p-8 mb-8 shadow-sm border border-slate-100 hover:shadow-lg transition-shadow duration-300">
+          <div className="flex flex-col lg:flex-row items-start gap-6">
             {/* 左侧：功能描述 */}
-            <div className="flex-1 w-full">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-violet-400 to-purple-500 flex items-center justify-center text-white shadow-lg shadow-purple-200">
-                  <UserCog className="w-6 h-6" />
+            <div className="lg:w-[40%] w-full">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-violet-400 to-purple-500 flex items-center justify-center text-white shadow-lg shadow-purple-200">
+                  <UserCog className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-slate-800">运营好酒店</h4>
+                  <h4 className="text-lg font-bold text-slate-800">运营好酒店</h4>
                 </div>
               </div>
 
-              <div className="space-y-3">
-                <div className="flex items-start gap-4 p-4 rounded-xl bg-slate-50/70 hover:bg-slate-50 transition-colors">
-                  <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-sm">
-                    <span className="text-purple-500 font-bold">01</span>
+              <div className="space-y-2">
+                <div className="flex items-start gap-3 p-3 rounded-xl bg-slate-50/70 hover:bg-slate-50 transition-colors">
+                  <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shrink-0 shadow-sm">
+                    <span className="text-purple-500 font-bold text-sm">01</span>
                   </div>
                   <div>
-                    <h5 className="font-semibold text-slate-800 mb-1">工单与服务管理</h5>
+                    <h5 className="font-semibold text-slate-800 text-sm mb-1">工单与服务管理</h5>
                     <p className="text-slate-500 text-sm leading-relaxed">集成客房工单处理、吐槽内容管理、行李寄存管理、订单扫码核销等功能，实现工作服务便捷处理</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4 p-4 rounded-xl bg-slate-50/70 hover:bg-slate-50 transition-colors">
-                  <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-sm">
-                    <span className="text-purple-500 font-bold">02</span>
+                <div className="flex items-start gap-3 p-3 rounded-xl bg-slate-50/70 hover:bg-slate-50 transition-colors">
+                  <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shrink-0 shadow-sm">
+                    <span className="text-purple-500 font-bold text-sm">02</span>
                   </div>
                   <div>
-                    <h5 className="font-semibold text-slate-800 mb-1">订单与交易管理</h5>
+                    <h5 className="font-semibold text-slate-800 text-sm mb-1">订单与交易管理</h5>
                     <p className="text-slate-500 text-sm leading-relaxed">支持订房订单、零售订单、服务订单的快捷移动端处理。</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4 p-4 rounded-xl bg-slate-50/70 hover:bg-slate-50 transition-colors">
-                  <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-sm">
-                    <span className="text-purple-500 font-bold">03</span>
+                <div className="flex items-start gap-3 p-3 rounded-xl bg-slate-50/70 hover:bg-slate-50 transition-colors">
+                  <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shrink-0 shadow-sm">
+                    <span className="text-purple-500 font-bold text-sm">03</span>
                   </div>
                   <div>
-                    <h5 className="font-semibold text-slate-800 mb-1">前台记事交班助手</h5>
+                    <h5 className="font-semibold text-slate-800 text-sm mb-1">前台记事交班助手</h5>
                     <p className="text-slate-500 text-sm leading-relaxed">酒店员工可通过自然语言对话向智能体表述事件，AI自动拆解出需求形成待办清单，同时能够实现一键交班及任务进度实时追踪。</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4 p-4 rounded-xl bg-slate-50/70 hover:bg-slate-50 transition-colors">
-                  <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-sm">
-                    <span className="text-purple-500 font-bold">04</span>
+                <div className="flex items-start gap-3 p-3 rounded-xl bg-slate-50/70 hover:bg-slate-50 transition-colors">
+                  <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center shrink-0 shadow-sm">
+                    <span className="text-purple-500 font-bold text-sm">04</span>
                   </div>
                   <div>
-                    <h5 className="font-semibold text-slate-800 mb-1">管理人员助手</h5>
+                    <h5 className="font-semibold text-slate-800 text-sm mb-1">管理人员助手</h5>
                     <p className="text-slate-500 text-sm leading-relaxed">为酒店管理人员提供酒店运营数据统计、房价竞价、热点活动等功能，帮助酒店管理人员更好的管理酒店。</p>
                   </div>
                 </div>
-
               </div>
             </div>
 
-            {/* 右侧：手机机模 */}
-            <div className="w-full lg:w-[260px] flex justify-center shrink-0">
-              <div className="w-full max-w-[220px] bg-gradient-to-b from-slate-300 to-slate-400 rounded-[32px] p-2 shadow-2xl overflow-hidden aspect-[9/19] relative">
-                <div className="w-full h-full bg-white rounded-[28px] overflow-hidden relative">
-                  <img src="./12.jpg" alt="运营好酒店" className="w-full h-full object-cover" />
+            {/* 右侧：手机机模 + 平板机模 */}
+            <div className="lg:w-[60%] w-full flex justify-center items-center gap-6 self-center">
+              {/* 左侧手机机模 */}
+              <div className="w-full max-w-[140px] bg-gradient-to-br from-slate-200 to-slate-300 rounded-[28px] p-1.5 shadow-2xl overflow-hidden aspect-[9/18] text-left flex flex-col font-sans relative group cursor-pointer border border-slate-100 transition-transform duration-300 hover:scale-[1.2] hover:z-10">
+                <div className="w-full h-full bg-slate-100 rounded-[24px] overflow-hidden relative">
+                  {/* Side buttons */}
+                  <div className="absolute top-14 -left-0.5 w-0.5 h-5 bg-slate-400 rounded-full"></div>
+                  <div className="absolute top-24 -left-0.5 w-0.5 h-7 bg-slate-400 rounded-full"></div>
+                  <div className="absolute top-20 -right-0.5 w-0.5 h-9 bg-slate-400 rounded-full"></div>
+                  <img src="./12.jpg" alt="运营好酒店-手机" className="w-full h-full object-cover" />
+                </div>
+              </div>
+              {/* 右侧平板机模 */}
+              <div className="w-full max-w-[520px] bg-gradient-to-b from-slate-300 to-slate-400 rounded-[28px] p-1.5 shadow-2xl overflow-hidden relative transition-transform duration-300 hover:scale-[1.2] hover:z-10">
+                <div className="w-full bg-white rounded-[24px] overflow-hidden relative">
+                  <img src="./17.png" alt="运营好酒店-平板" className="w-full h-auto object-cover" />
                 </div>
               </div>
             </div>
