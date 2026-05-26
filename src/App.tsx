@@ -1353,6 +1353,40 @@ export default function App() {
                             <p className="text-slate-600 text-sm md:text-[15px] leading-relaxed select-none">
                               {card.content}
                             </p>
+                            
+                            {/* 供应链分销增收表格 */}
+                            {card.id === "供应链分销增收" && isActive && (
+                              <div className="mt-4 overflow-hidden rounded-xl border border-emerald-200 bg-white shadow-sm">
+                                {/* 数据指标表格 */}
+                                <table className="w-full text-sm">
+                                  <thead>
+                                    <tr className="bg-gradient-to-r from-emerald-50 to-teal-50">
+                                      <th className="px-3 py-3 text-emerald-800 font-bold text-center border-r border-emerald-100">酒店客房总量</th>
+                                      <th className="px-3 py-3 text-emerald-800 font-bold text-center border-r border-emerald-100">客房入住率</th>
+                                      <th className="px-3 py-3 text-emerald-800 font-bold text-center border-r border-emerald-100">商城打开率</th>
+                                      <th className="px-3 py-3 text-emerald-800 font-bold text-center border-r border-emerald-100">下单转化率</th>
+                                      <th className="px-3 py-3 text-emerald-800 font-bold text-center border-r border-emerald-100">单笔订单金额</th>
+                                      <th className="px-3 py-3 text-emerald-800 font-bold text-center">订单利润率</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr className="bg-white">
+                                      <td className="px-3 py-3 text-center text-slate-700 font-medium border-r border-emerald-100">50间</td>
+                                      <td className="px-3 py-3 text-center text-slate-700 font-medium border-r border-emerald-100">40%</td>
+                                      <td className="px-3 py-3 text-center text-slate-700 font-medium border-r border-emerald-100">20%</td>
+                                      <td className="px-3 py-3 text-center text-slate-700 font-medium border-r border-emerald-100">10%</td>
+                                      <td className="px-3 py-3 text-center text-slate-700 font-medium border-r border-emerald-100">200元</td>
+                                      <td className="px-3 py-3 text-center text-slate-700 font-medium">10%</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                {/* 年总利润突出显示 */}
+                                  <div className="bg-gradient-to-r from-emerald-500 to-teal-500 py-4 px-6 flex items-center justify-between">
+                                    <span className="text-white font-semibold text-base">预估年总利润</span>
+                                    <span className="text-white font-bold text-2xl">¥2,920</span>
+                                  </div>
+                              </div>
+                            )}
                           </div>
                         </motion.div>
                       );
