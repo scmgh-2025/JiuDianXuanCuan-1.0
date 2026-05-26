@@ -984,7 +984,7 @@ export default function App() {
               },
               {
                 icon: Target,
-                title: "经营好受益",
+                title: "经营好收益",
                 desc: "接入优质旅游产品和通盘供应链，增加非房收入"
               }
             ].map((card, idx) => {
@@ -1178,7 +1178,7 @@ export default function App() {
           </div>
         </motion.div>
 
-        {/* 功能模块3：经营好受益 */}
+        {/* 功能模块3：经营好收益 */}
         <motion.div {...fadeIn} transition={{ delay: 0.2 }} className="bg-white rounded-[24px] p-6 md:p-8 shadow-sm border border-slate-100 hover:shadow-lg transition-shadow duration-300">
           <div className="flex flex-col lg:flex-row items-start gap-6">
             {/* 左侧：功能描述 */}
@@ -1188,7 +1188,7 @@ export default function App() {
                   <Monitor className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-slate-800">经营好受益</h4>
+                  <h4 className="text-lg font-bold text-slate-800">经营好收益</h4>
                 </div>
               </div>
 
@@ -1199,7 +1199,7 @@ export default function App() {
                   </div>
                   <div>
                     <h5 className="font-semibold text-slate-800 text-sm mb-1">自营商城</h5>
-                    <p className="text-slate-500 text-sm leading-relaxed">酒店可自主装修自营商城首页，并自行上架商品，打造专属线上销售渠道。</p>
+                    <p className="text-slate-500 text-sm leading-relaxed">支持酒店自有商品等上架销售，无佣金，收益全部归酒店。</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3 p-3 rounded-xl bg-slate-50/70 hover:bg-slate-50 transition-colors">
@@ -1208,7 +1208,7 @@ export default function App() {
                   </div>
                   <div>
                     <h5 className="font-semibold text-slate-800 text-sm mb-1">平台商城</h5>
-                    <p className="text-slate-500 text-sm leading-relaxed">酒店不但可作为平台供应商，自主装修商城首页并上架商品，面向其他酒店开放采购，让别的酒店为你卖货。还能一键接入热门景区门票、精品线路、本地特产等资源，不囤货、不压货，赚取更多收入。</p>
+                    <p className="text-slate-500 text-sm leading-relaxed">免费接入景区门票、本地特产、精品线路等优质资源，一键上架赚取稳定分润。</p>
                   </div>
                 </div>
               </div>
@@ -1223,13 +1223,13 @@ export default function App() {
                   <div className="absolute top-14 -left-0.5 w-0.5 h-5 bg-slate-400 rounded-full"></div>
                   <div className="absolute top-24 -left-0.5 w-0.5 h-7 bg-slate-400 rounded-full"></div>
                   <div className="absolute top-20 -right-0.5 w-0.5 h-9 bg-slate-400 rounded-full"></div>
-                  <img src="./gyl.png" alt="经营好受益-手机" className="w-full h-full object-cover" />
+                  <img src="./gyl.png" alt="经营好收益-手机" className="w-full h-full object-cover" />
                 </div>
               </div>
               {/* 右侧平板机模 */}
               <div className="w-full max-w-[520px] bg-gradient-to-b from-slate-300 to-slate-400 rounded-[28px] p-1.5 shadow-2xl overflow-hidden relative transition-transform duration-300 hover:scale-[1.2] hover:z-10">
                 <div className="w-full bg-white rounded-[24px] overflow-hidden relative">
-                  <img src="./10.png" alt="经营好受益" className="w-full h-auto object-cover" />
+                  <img src="./10.png" alt="经营好收益" className="w-full h-auto object-cover" />
                 </div>
               </div>
             </div>
