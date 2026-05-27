@@ -138,7 +138,7 @@ export default function App() {
           >
             数智赋能·宿启新程
             <br />
-            <span className="text-5xl md:text-7xl text-blue-400 mt-6 inline-block">黄小西酒店智能体介绍</span>
+            <span className="text-4xl md:text-6xl bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent mt-6 inline-block">多彩黄小西及相关智能体介绍</span>
           </motion.h1>
         </div>
       </header>
@@ -254,93 +254,6 @@ export default function App() {
               </div>
             </div>
           </motion.div>
-
-          <motion.div {...fadeIn} className="flex items-center gap-3 text-rose-600 mb-10">
-            <div className="w-8 h-8 rounded-full bg-rose-100 flex items-center justify-center shrink-0">
-              <AlertCircle className="w-4 h-4" />
-            </div>
-            <h4 className="text-2xl font-bold font-display text-slate-900">为什么酒店要做AI升级?</h4>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
-            {/* 人力成本高 */}
-            <motion.div 
-              {...fadeIn} 
-              transition={{ delay: 0 }}
-              className="rounded-3xl bg-white border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] overflow-hidden hover:shadow-lg transition-shadow"
-            >
-              <div className="p-5 bg-gradient-to-br from-rose-50 to-white border-b border-rose-100">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-rose-500 text-white flex items-center justify-center">
-                    <Users className="w-5 h-5" />
-                  </div>
-                  <h5 className="text-lg font-bold text-slate-900">人力成本高</h5>
-                </div>
-              </div>
-              <div className="p-5 space-y-3">
-                <p className="text-sm text-slate-600 leading-relaxed">
-                  <span className="text-rose-500 font-medium">问题：</span>
-                  前台重复性工作繁重，入住登记、咨询解答等占用大量人力；人员流动率高，招聘培训成本持续攀升。
-                </p>
-                <p className="text-sm text-slate-600 leading-relaxed pt-3 border-t border-slate-100">
-                  <span className="text-emerald-600 font-medium">智能体作用：</span>
-                  AI智能问答7×24小时自动解答住客问题，智能工单自动分类派单，大幅降低人工成本和协调成本。
-                </p>
-              </div>
-            </motion.div>
-
-            {/* 服务不标准 */}
-            <motion.div 
-              {...fadeIn} 
-              transition={{ delay: 0.1 }}
-              className="rounded-3xl bg-white border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] overflow-hidden hover:shadow-lg transition-shadow"
-            >
-              <div className="p-5 bg-gradient-to-br from-amber-50 to-white border-b border-amber-100">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-amber-500 text-white flex items-center justify-center">
-                    <Award className="w-5 h-5" />
-                  </div>
-                  <h5 className="text-lg font-bold text-slate-900">服务不标准</h5>
-                </div>
-              </div>
-              <div className="p-5 space-y-3">
-                <p className="text-sm text-slate-600 leading-relaxed">
-                  <span className="text-amber-500 font-medium">问题：</span>
-                  服务质量依赖个体能力，水平参差不齐；高峰期人力有限，住客等待时间长，体验受损。
-                </p>
-                <p className="text-sm text-slate-600 leading-relaxed pt-3 border-t border-slate-100">
-                  <span className="text-emerald-600 font-medium">智能体作用：</span>
-                  智能体服务标准统一、回复稳定准确，高峰期不受人力限制；多智能体协同提供个性化入住引导和各种场景服务。
-                </p>
-              </div>
-            </motion.div>
-
-            {/* 酒店管理难 */}
-            <motion.div 
-              {...fadeIn} 
-              transition={{ delay: 0.2 }}
-              className="rounded-3xl bg-white border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] overflow-hidden hover:shadow-lg transition-shadow"
-            >
-              <div className="p-5 bg-gradient-to-br from-blue-50 to-white border-b border-blue-100">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-blue-500 text-white flex items-center justify-center">
-                    <Settings className="w-5 h-5" />
-                  </div>
-                  <h5 className="text-lg font-bold text-slate-900">酒店管理难</h5>
-                </div>
-              </div>
-              <div className="p-5 space-y-3">
-                <p className="text-sm text-slate-600 leading-relaxed">
-                  <span className="text-blue-500 font-medium">问题：</span>
-                  人员流动大导致管理断层，服务规范传承困难；缺乏有效监督手段，问题难以追溯复盘。
-                </p>
-                <p className="text-sm text-slate-600 leading-relaxed pt-3 border-t border-slate-100">
-                  <span className="text-emerald-600 font-medium">智能体作用：</span>
-                  AI智能体承担标准化服务，确保规范执行不受人员变动影响；全程留痕，管理数据可视化，随时查看服务记录和问题解决率。
-                </p>
-              </div>
-            </motion.div>
-          </div>
 
           <motion.div {...fadeIn} className="bg-blue-600 rounded-3xl p-8 md:p-12 text-white relative overflow-hidden" id="industry-trend">
             <div className="absolute right-0 bottom-0 opacity-10">
@@ -966,6 +879,96 @@ export default function App() {
 </h3>
         </motion.div>
 
+        {/* 为什么酒店要做AI升级？ */}
+        <motion.div {...fadeIn} className="mb-16">
+          <motion.div {...fadeIn} className="flex items-center gap-3 text-rose-600 mb-10">
+            <div className="w-8 h-8 rounded-full bg-rose-100 flex items-center justify-center shrink-0">
+              <AlertCircle className="w-4 h-4" />
+            </div>
+            <h4 className="text-2xl font-bold font-display text-slate-900">为什么酒店要做AI升级?</h4>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
+            {/* 人力成本高 */}
+            <motion.div 
+              {...fadeIn} 
+              transition={{ delay: 0 }}
+              className="rounded-3xl bg-white border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] overflow-hidden hover:shadow-lg transition-shadow"
+            >
+              <div className="p-5 bg-gradient-to-br from-rose-50 to-white border-b border-rose-100">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-rose-500 text-white flex items-center justify-center">
+                    <Users className="w-5 h-5" />
+                  </div>
+                  <h5 className="text-lg font-bold text-slate-900">人力成本高</h5>
+                </div>
+              </div>
+              <div className="p-5 space-y-3">
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  <span className="text-rose-500 font-medium">问题：</span>
+                  前台重复性工作繁重，入住登记、咨询解答等占用大量人力；人员流动率高，招聘培训成本持续攀升。
+                </p>
+                <p className="text-sm text-slate-600 leading-relaxed pt-3 border-t border-slate-100">
+                  <span className="text-emerald-600 font-medium">智能体作用：</span>
+                  AI智能问答7×24小时自动解答住客问题，智能工单自动分类派单，大幅降低人工成本和协调成本。
+                </p>
+              </div>
+            </motion.div>
+
+            {/* 服务不标准 */}
+            <motion.div 
+              {...fadeIn} 
+              transition={{ delay: 0.1 }}
+              className="rounded-3xl bg-white border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] overflow-hidden hover:shadow-lg transition-shadow"
+            >
+              <div className="p-5 bg-gradient-to-br from-amber-50 to-white border-b border-amber-100">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-amber-500 text-white flex items-center justify-center">
+                    <Award className="w-5 h-5" />
+                  </div>
+                  <h5 className="text-lg font-bold text-slate-900">服务不标准</h5>
+                </div>
+              </div>
+              <div className="p-5 space-y-3">
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  <span className="text-amber-500 font-medium">问题：</span>
+                  服务质量依赖个体能力，水平参差不齐；高峰期人力有限，住客等待时间长，体验受损。
+                </p>
+                <p className="text-sm text-slate-600 leading-relaxed pt-3 border-t border-slate-100">
+                  <span className="text-emerald-600 font-medium">智能体作用：</span>
+                  智能体服务标准统一、回复稳定准确，高峰期不受人力限制；多智能体协同提供个性化入住引导和各种场景服务。
+                </p>
+              </div>
+            </motion.div>
+
+            {/* 酒店管理难 */}
+            <motion.div 
+              {...fadeIn} 
+              transition={{ delay: 0.2 }}
+              className="rounded-3xl bg-white border border-slate-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] overflow-hidden hover:shadow-lg transition-shadow"
+            >
+              <div className="p-5 bg-gradient-to-br from-blue-50 to-white border-b border-blue-100">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-blue-500 text-white flex items-center justify-center">
+                    <Settings className="w-5 h-5" />
+                  </div>
+                  <h5 className="text-lg font-bold text-slate-900">酒店管理难</h5>
+                </div>
+              </div>
+              <div className="p-5 space-y-3">
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  <span className="text-blue-500 font-medium">问题：</span>
+                  人员流动大导致管理断层，服务规范传承困难；缺乏有效监督手段，问题难以追溯复盘。
+                </p>
+                <p className="text-sm text-slate-600 leading-relaxed pt-3 border-t border-slate-100">
+                  <span className="text-emerald-600 font-medium">智能体作用：</span>
+                  AI智能体承担标准化服务，确保规范执行不受人员变动影响；全程留痕，管理数据可视化，随时查看服务记录和问题解决率。
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </motion.div>
+
         {/* --- Image Content: "什么是"酒店智能体"？" --- */}
         <motion.div {...fadeIn} className="mb-20">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -1361,18 +1364,18 @@ export default function App() {
                                 <table className="w-full text-sm">
                                   <thead>
                                     <tr className="bg-gradient-to-r from-emerald-50 to-teal-50">
-                                      <th className="px-3 py-3 text-emerald-800 font-bold text-center border-r border-emerald-100">酒店客房总量</th>
-                                      <th className="px-3 py-3 text-emerald-800 font-bold text-center border-r border-emerald-100">客房入住率</th>
-                                      <th className="px-3 py-3 text-emerald-800 font-bold text-center border-r border-emerald-100">商城打开率</th>
-                                      <th className="px-3 py-3 text-emerald-800 font-bold text-center border-r border-emerald-100">下单转化率</th>
-                                      <th className="px-3 py-3 text-emerald-800 font-bold text-center border-r border-emerald-100">单笔订单金额</th>
-                                      <th className="px-3 py-3 text-emerald-800 font-bold text-center">订单利润率</th>
+                                      <th className="px-2 py-3 text-emerald-800 font-bold text-center border-r border-emerald-100 whitespace-nowrap">酒店客房总量</th>
+                                      <th className="px-2 py-3 text-emerald-800 font-bold text-center border-r border-emerald-100 whitespace-nowrap">客房入住率</th>
+                                      <th className="px-2 py-3 text-emerald-800 font-bold text-center border-r border-emerald-100 whitespace-nowrap">商城打开率</th>
+                                      <th className="px-2 py-3 text-emerald-800 font-bold text-center border-r border-emerald-100 whitespace-nowrap">下单转化率</th>
+                                      <th className="px-2 py-3 text-emerald-800 font-bold text-center border-r border-emerald-100 whitespace-nowrap">单笔订单金额</th>
+                                      <th className="px-2 py-3 text-emerald-800 font-bold text-center whitespace-nowrap">订单利润率</th>
                                     </tr>
                                   </thead>
                                   <tbody>
                                     <tr className="bg-white">
-                                      <td className="px-3 py-3 text-center text-slate-700 font-medium border-r border-emerald-100">50间</td>
-                                      <td className="px-3 py-3 text-center text-slate-700 font-medium border-r border-emerald-100">40%</td>
+                                      <td className="px-3 py-3 text-center text-slate-700 font-medium border-r border-emerald-100">200间</td>
+                                      <td className="px-3 py-3 text-center text-slate-700 font-medium border-r border-emerald-100">60%</td>
                                       <td className="px-3 py-3 text-center text-slate-700 font-medium border-r border-emerald-100">20%</td>
                                       <td className="px-3 py-3 text-center text-slate-700 font-medium border-r border-emerald-100">10%</td>
                                       <td className="px-3 py-3 text-center text-slate-700 font-medium border-r border-emerald-100">200元</td>
@@ -1381,10 +1384,10 @@ export default function App() {
                                   </tbody>
                                 </table>
                                 {/* 年总利润突出显示 */}
-                                  <div className="bg-gradient-to-r from-emerald-500 to-teal-500 py-4 px-6 flex items-center justify-between">
-                                    <span className="text-white font-semibold text-base">预估年总利润</span>
-                                    <span className="text-white font-bold text-2xl">¥2,920</span>
-                                  </div>
+                                   <div className="bg-gradient-to-r from-emerald-500 to-teal-500 py-4 px-6 flex items-center justify-between">
+                                     <span className="text-white font-semibold text-base">预估年总利润</span>
+                                     <span className="text-white font-bold text-2xl">¥17,520</span>
+                                   </div>
                               </div>
                             )}
                           </div>
